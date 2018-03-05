@@ -1,0 +1,18 @@
+.profile{
+  display: block;
+  margin-left:40%;
+}
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('../../../assets/ronaldo1.jpeg');
+  background-size: cover;
+}
+
+/*.pic{*/
+  /*margin-left: 10%;*/
+  /*height: 300px;*/
+  /*width: 300px;*/
+/*}*/

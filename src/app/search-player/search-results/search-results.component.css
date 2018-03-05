@@ -1,0 +1,14 @@
+img{
+  width: 300px;
+  height: 250px;
+}
+.ui-g-10{
+  font-weight: bold;
+}
+.player-item{
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: lavender;
+  margin-left: 20%;
+}
+
