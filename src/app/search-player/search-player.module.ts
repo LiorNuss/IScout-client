@@ -7,16 +7,22 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { PlayerResultComponent } from './player-result/player-result.component';
 import {SearchPlayerService} from "./search-player/search-player.service";
 import {DataScrollerModule} from 'primeng/datascroller';
+import { PlayerResultListComponent } from './player-result-list/player-result-list.component';
+import {DataListModule} from "primeng/primeng";
+import {MatToolbarModule, MatCardModule} from "@angular/material";
 
 @NgModule({
   imports: [
     CommonModule,
     PlayerUtilsModule,
     FormsModule,
-    DataScrollerModule
+    DataScrollerModule,
+    DataListModule,
+    MatCardModule,
+    MatToolbarModule
   ],
-  declarations: [SearchPlayerComponent, SearchResultsComponent, PlayerResultComponent],
-  exports: [SearchPlayerComponent, SearchResultsComponent],
+  declarations: [SearchPlayerComponent, SearchResultsComponent, PlayerResultComponent, PlayerResultListComponent],
+  exports: [SearchPlayerComponent, SearchResultsComponent, PlayerResultListComponent],
   providers: [SearchPlayerService]
 })
 export class SearchPlayerModule { }

@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild, Output, EventEmitter} from '@angular/core';
 import {Player} from '../../player-utils/entities/player';
 import {PlayerDaoService} from '../../player-utils/services/player-dao.service';
 import {SearchPlayerService} from "./search-player.service";
@@ -15,6 +15,7 @@ export class SearchPlayerComponent implements OnInit {
   countries: string[];
   teams: string[];
   legs: string[];
+  @Output() searchEvent = new EventEmitter();
 
   constructor(private playerDao: PlayerDaoService,
               private searchService: SearchPlayerService) {
@@ -61,5 +62,9 @@ export class SearchPlayerComponent implements OnInit {
       console.log('Search Service');
       console.log(this.searchService.players);
     } );
+  }
+
+  onSubmit(): void {
+    this.searchEvent.emit();
   }
 }

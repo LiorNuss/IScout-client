@@ -1,16 +1,29 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="tifoli-color">
+
   <mat-toolbar-row>
     <span>IScout <i class="far fa-futbol"></i></span>
     <span class="example-spacer"></span>
-    <span class="example-icon">Home</span>
-    <span class="example-icon">Profile</span>
-    <span class="example-icon">Search Engine</span>
-    <span class="example-icon">Logout</span>
+    <span class="example-icon home" (click)="profileClick()">Home</span>
+    <span class="example-icon profile" (click)="profileClick()">Profile</span>
+    <span class="example-icon searchEngine" (click)="searchPlayerClick()">Search Engine</span>
+    <span class="example-icon logout" (click)="loginClick()">Logout</span>
 
   </mat-toolbar-row>
 </mat-toolbar>
-<!--<app-player-registration> </app-player-registration>-->
-<!--<app-player-profile></app-player-profile>-->
-<!--<app-search-player></app-search-player>-->
-<!--<app-search-results></app-search-results>-->
-<app-login></app-login>
+<!--<app-player-registration *ngIf="registarion"> </app-player-registration>-->
+<!--<app-player-profile *ngIf="profile"></app-player-profile>-->
+<!--<app-search-player *ngIf="searchPlayer" (searchEvent)="searchResultsClick()"></app-search-player>-->
+<!--<app-search-results *ngIf="searchResults"></app-search-results>-->
+<!--<app-login *ngIf="login"  (login)="profileClick()" (register)="registrationClick()"></app-login>-->
+<!--<app-player-result-list></app-player-result-list>-->
+<!--<div class="list-headline-row-graph">-->
+  <!--<span class="list-headline">גרף שחקן</span>-->
+<!--</div>-->
+<!--<img class="graph-widget" src="../assets/radarImg.png">-->
+<!--<div class="list-headline-row-map">-->
+  <!--<span class="list-headline">מיקום שחקן</span>-->
+<!--</div>-->
+<!--<img class="map-widget" src="../assets/Google-Maps-696x365.jpg">-->
+<app-search-row></app-search-row>
+<app-player-result-list></app-player-result-list>
+<app-player-graph class="graph-widget"></app-player-graph>

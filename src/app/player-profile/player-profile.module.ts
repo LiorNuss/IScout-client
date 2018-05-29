@@ -7,7 +7,7 @@ import {MatCardModule} from "@angular/material";
 @NgModule({
   imports: [
     CommonModule,
-    PlayerUtilsModule,MatCardModule
+    PlayerUtilsModule, MatCardModule
   ],
   declarations: [PlayerProfileComponent],
   exports: [PlayerProfileComponent]

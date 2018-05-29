@@ -5,3 +5,61 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.profile {
+  cursor: pointer;
+}
+
+.home {
+  cursor: pointer;
+}
+
+.searchEngine {
+  cursor: pointer;
+}
+
+.logout {
+  cursor: pointer;
+}
+.graph-widget{
+  position: absolute;
+  top: 62%;
+  left: 30px;
+  height: 35%;
+  width: 48.5%;
+}
+.tifoli-color{
+  background-color: #1a6d7c;
+  color: #fafafa;
+}
+.map-widget{
+  position: absolute;
+  top: 36%;
+  width: 48.5%;
+  height: 33%;
+  left: 30px;
+}
+.list-headline-row-graph{
+  position: absolute;
+  height: 30px;
+  font-size: large;
+  width: 48.5%;
+  background-color: #e6edef;
+  border-bottom-color: #3dc1d6;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  top: 71%;
+  left: 30px;
+}
+.list-headline-row-map{
+  position: absolute;
+  height: 30px;
+  font-size: large;
+  width: 48.5%;
+  background-color: #e6edef;
+  border-bottom-color: #3dc1d6;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  top: 32%;
+  left: 30px;
+}

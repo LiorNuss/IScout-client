@@ -1,10 +1,18 @@
-<div>
-  <span> player name </span> <span> {{player.name}} </span>
-  <span> age </span> <span> {{player.age}} </span>
-  <span> position </span> <span> {{player.position}} </span>
-  <span> leg </span> <span> {{player.leg}} </span>
-  <span> country </span> <span> {{player.country}} </span>
-  <span> team </span> <span> {{player.team}} </span>
-  <span> goals </span> <span> {{player.goals}} </span>
-  <span> assists </span> <span> {{player.assists}} </span>
+<div class="list-row">
+  <!--<img src="../../../assets/amir.jpg">-->
+  <span class="image">
+  <mat-card class="example-card ">
+    <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    </mat-card-header>
+  </mat-card>
+  </span>
+  <span class="details-player">
+  <span class="player-name"> שם:  {{player.name}} </span>
+  <span class="player-age"> גיל: {{player.age}} </span>
+  <span class="player-position"> עמדה: {{player.position}} </span>
+  <span class="player-foot"> רגל: {{player.leg}} </span>
+  <span class="player-state"> מדינה: {{player.country}} </span>
+  <span class="player-team"> קבוצה: {{player.team}} </span>
+    </span>
 </div>

@@ -5,8 +5,8 @@
 <span>username</span> <span></span> <span></span> <span></span> <span></span><span><input type="text" pInputText #username /></span>
 <div></div>
   <br>
-<span>password</span> <span></span><span></span><span></span><span></span> <span><input type="text" pInputText #password/></span>
+<span>password</span> <span></span><span></span><span></span><span></span> <span></span> <span></span> <span><input type="password" pInputText #password/></span>
   <button (click)="onSubmit()"> התחבר</button>
   <br> <br>
-  <h4> <a>Not a Member yet? <u>Sign Up Here </u></a> </h4>
+  <h4> <a>Not a Member yet? <u (click)="registerClick()">Sign Up Here </u></a> </h4>
 </div>

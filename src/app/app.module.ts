@@ -8,6 +8,8 @@ import {PlayerProfileModule} from './player-profile/player-profile.module';
 import {SearchPlayerModule} from './search-player/search-player.module';
 import {MatToolbarModule} from "@angular/material";
 import {LoginModule} from "./login/login.module";
+import {SearchRowModule} from "./search-row/search-row.module";
+import {PlayerGraphModule} from "./player-graph/player-graph.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {LoginModule} from "./login/login.module";
     PlayerProfileModule,
     SearchPlayerModule,
     MatToolbarModule,
-    LoginModule
+    LoginModule,
+    SearchRowModule,
+    PlayerGraphModule
   ],
   providers: [],
   bootstrap: [AppComponent]

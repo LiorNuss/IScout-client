@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {PlayerDaoService} from "../../player-utils/services/player-dao.service";
 import {Player} from "../../player-utils/entities/player";
 
@@ -11,6 +11,8 @@ export class LoginComponent implements OnInit {
   @ViewChild('username') username: ElementRef;
   @ViewChild('password') password: ElementRef;
   player: Player;
+  @Output() login = new EventEmitter();
+  @Output() register = new EventEmitter();
 
   constructor(private playerDao: PlayerDaoService) { }
 
@@ -22,5 +24,10 @@ export class LoginComponent implements OnInit {
       this.player = playerData;
       }
     );
+    this.login.emit();
+  }
+
+  registerClick() {
+    this.register.emit();
   }
 }
