@@ -1,8 +1,7 @@
 import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {PlayerDaoService} from "../../player-utils/services/player-dao.service";
 import {Player} from "../../player-utils/entities/player";
-import {PlayerLoginService} from "../../player-login/player-login.service";
-import {ScouterLoginService} from "../../scouter-login/scouter-login.service";
+import {LoginService} from "../login.service";
 
 @Component({
   selector: 'app-login',
@@ -16,8 +15,7 @@ export class LoginComponent implements OnInit {
   @Output() login = new EventEmitter();
   @Output() register = new EventEmitter();
 
-  constructor(private playerLoginService: PlayerLoginService,
-              private scouterLoginService: ScouterLoginService) { }
+  constructor(private loginService: LoginService) {}
 
   ngOnInit() {
   }
@@ -28,7 +26,9 @@ export class LoginComponent implements OnInit {
     //   }
     // );
     //this.playerLoginService.playerLogin(this.username.nativeElement.value, this.password.nativeElement.value);
-    this.scouterLoginService.scouterLogin(this.username.nativeElement.value, this.password.nativeElement.value);
+    //this.scouterLoginService.scouterLogin(this.username.nativeElement.value, this.password.nativeElement.value);
+    this.loginService.playerLogin(this.username.nativeElement.value, this.password.nativeElement.value);
+    this.login.emit();
 
   }
 

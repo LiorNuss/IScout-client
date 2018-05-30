@@ -14,7 +14,7 @@
 <app-player-profile *ngIf="profile"></app-player-profile>
 <app-search-player *ngIf="searchPlayer" (searchEvent)="searchResultsClick()"></app-search-player>
 <app-search-results *ngIf="searchResults"></app-search-results>
-<app-login *ngIf="login"  (login)="profileClick()" (register)="registrationClick()"></app-login>
+<app-login *ngIf="login"  (login)="dashboardClick()" (register)="registrationClick()"></app-login>
 <!--<app-player-result-list></app-player-result-list>-->
 <!--<div class="list-headline-row-graph">-->
   <!--<span class="list-headline">גרף שחקן</span>-->
@@ -24,6 +24,6 @@
   <!--<span class="list-headline">מיקום שחקן</span>-->
 <!--</div>-->
 <!--<img class="map-widget" src="../assets/Google-Maps-696x365.jpg">-->
-<!--<app-search-row></app-search-row>-->
-<!--<app-player-result-list></app-player-result-list>-->
-<!--&lt;!&ndash;<app-player-graph class="graph-widget"></app-player-graph>&ndash;&gt;-->
+<app-search-row *ngIf ="dashboard"></app-search-row>
+<app-player-result-list *ngIf ="dashboard"></app-player-result-list>
+<!--<<app-player-graph class="graph-widget"></app-player-graph>-->

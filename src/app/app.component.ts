@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PlayerDaoService} from './player-utils/services/player-dao.service';
 import {Player} from './player-utils/entities/player';
+import {InitService} from "./shared/services/init.service";
 
 @Component({
   selector: 'app-root',
@@ -14,17 +15,12 @@ export class AppComponent implements OnInit {
   searchPlayer = false;
   searchResults = false;
   login = true;
-
-  constructor(private playerDaoService: PlayerDaoService) {
+  dashboard = false;
+  constructor(private initService: InitService) {
   }
 
   ngOnInit(): void {
-    // this.playerDaoService.getPlayerLogin('liornuss', 'liornuss').subscribe(playerFromDao => {
-    //   const player = new Player();
-    //   player.name = playerFromDao['name'];
-    //   console.log(player.name);
-    //   }
-    // );
+   this.initService.init();
   }
 
   registrationClick() {
@@ -65,5 +61,14 @@ export class AppComponent implements OnInit {
     this.profile = false;
     this.searchResults = false;
     this.login = true;
+  }
+
+  dashboardClick() {
+    this.dashboard = true;
+    this.registarion = false;
+    this.searchPlayer = false;
+    this.profile = false;
+    this.searchResults = false;
+    this.login = false;
   }
 }

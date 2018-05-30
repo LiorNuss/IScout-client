@@ -10,6 +10,7 @@ import {MatToolbarModule} from "@angular/material";
 import {LoginModule} from "./login/login.module";
 import {SearchRowModule} from "./search-row/search-row.module";
 import {PlayerGraphModule} from "./player-graph/player-graph.module";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {PlayerGraphModule} from "./player-graph/player-graph.module";
     MatToolbarModule,
     LoginModule,
     SearchRowModule,
-    PlayerGraphModule
+    PlayerGraphModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
