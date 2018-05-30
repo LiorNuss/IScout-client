@@ -1,0 +1,21 @@
+
+<!--<button pButton type="button" (click)="categoryClick('שם השחקן')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('שם השחקן') !== -1,'ui-button-secondary':currentCategory!=='שם'&&chosenCategories.indexOf('שם') === -1}" label="שם השחקן"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('גיל')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('גיל') !== -1,'ui-button-secondary':currentCategory!=='גיל'&&chosenCategories.indexOf('גיל') === -1}" label="גיל"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('רגל מועדפת')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('רגל מועדפת') !== -1,'ui-button-secondary':currentCategory!=='רגל מועדפת'&&chosenCategories.indexOf('רגל מועדפת') === -1}" label="רגל מועדפת"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('תפקיד')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('תפקיד') !== -1,'ui-button-secondary':currentCategory!=='תפקיד'&&chosenCategories.indexOf('תפקיד') === -1}" label="תפקיד"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('שם השחקן')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('קבוצה') !== -1,'ui-button-secondary':currentCategory!=='קבוצה'&&chosenCategories.indexOf('קבוצה') === -1}" label="קבוצה"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('קבוצה')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('מדינה') !== -1,'ui-button-secondary':currentCategory!=='מדינה'&&chosenCategories.indexOf('מדינה') === -1}" label="מדינה"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('שם השחקן')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('גולים') !== -1,'ui-button-secondary':currentCategory!=='גולים'&&chosenCategories.indexOf('גולים') === -1}" label="גולים"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('גולים')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('בישולים') !== -1,'ui-button-secondary':currentCategory!=='בישולים'&&chosenCategories.indexOf('בישולים') === -1}" label="בישולים"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('שם השחקן')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('משחקים בהרכב') !== -1,'ui-button-secondary':currentCategory!=='משחקים בהרכב'&&chosenCategories.indexOf('משחקים בהרכב') === -1}" label="משחקים בהרכב"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('שם השחקן')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('משחקים בספסל') !== -1,'ui-button-secondary':currentCategory!=='משחקים בספסל'&&chosenCategories.indexOf('משחקים בספסל') === -1}" label="משחקים בספסל"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('שם השחקן')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('כרטיסים צהובים') !== -1,'ui-button-secondary':currentCategory!=='כרטיסים צהובים'&&chosenCategories.indexOf('כרטיסים צהובים') === -1}" label="כרטיסים צהובים"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('שם השחקן')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('כרטיסים אדומים') !== -1,'ui-button-secondary':currentCategory!=='כרטיסים אדומים'&&chosenCategories.indexOf('כרטיסים אדומים') === -1}" label="כרטיסים אדומים"></button>-->
+<!--<button pButton type="button" (click)="categoryClick('שם השחקן')"  [ngClass] = "{'ui-button-success': chosenCategories.indexOf('ממוצע קילומטרים') !== -1,'ui-button-secondary':currentCategory!=='ממוצע קילומטרים'&&chosenCategories.indexOf('ממוצע קילומטרים') === -1}" label="ממוצע קילומטרים"></button>-->
+
+
+<button pButton type="button" *ngFor="let category of allCategories" (click)="onCategoryClick(category)"
+        [ngClass]="{'ui-button-success': chosenCategories.indexOf(category) !== -1,
+                    'ui-button-secondary': currentCategory !== category && chosenCategories.indexOf(category) === -1}" label={{category}}>
+
+</button>

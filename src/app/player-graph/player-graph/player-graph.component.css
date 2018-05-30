@@ -1,0 +1,25 @@
+:host /deep/ div{
+  position: relative;
+  right: 22%;
+}
+.list-headline-row-graph{
+  position: absolute;
+  height: 30px;
+  font-size: large;
+  width: 100%;
+  background-color: #e6edef;
+  border-bottom-color: #3dc1d6;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  bottom: 100%;
+  left: 30px;
+  right: 0% !important;
+}
+:host{
+  background-color: white;
+  box-shadow: 3px 3px 2px #888888;
+}
+.list-headline{
+  display: block;
+  margin-right: 45%;
+}

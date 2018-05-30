@@ -1,0 +1,22 @@
+.player-results-list{
+  border-style: solid;
+  border-width: 3px;
+  margin-left: 51%;
+  margin-right: 2%;
+  border-color: #d9d9d9;
+  box-shadow: 3px 3px 2px #888888;;
+}
+.list-headline{
+  display: block;
+  margin-right: 40%;
+  padding-top: 1.5%;
+}
+.list-headline-row{
+  height: 48px;
+  font-size: large;
+  background-color: #e6edef;
+  border-bottom-color: #3dc1d6;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+
