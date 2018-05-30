@@ -9,9 +9,9 @@ export class PlayerDaoService {
 
   constructor(private serverConnector: ServerConnectorService) { }
 
-  public getPlayerLogin(username: string, password: string): Observable<Player> {
+  public getPlayerLogin(username: string, password: string): Observable<any> {
     // TODO change to config file of all routes
-    const playerLoginUrl = 'http://localhost:3000/api/model/login';
+    const playerLoginUrl = 'player/login';
     const params = { params: new HttpParams().set('username', username).set('password', password) };
     return this.serverConnector.getData(playerLoginUrl, params);
   }

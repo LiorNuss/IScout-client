@@ -1,10 +1,15 @@
 export class Player {
+  private _userId: number;
+  private _playerId: number;
   private _name: string;
   private _age: number;
   private _leg: string;
   private _position: string;
   private _team: string;
   private _country: string;
+  private _videosUrl: string[];
+  private _image: string;
+
   // TODO change to standart
   private _own_description: string;
   private _year: number;
@@ -171,5 +176,38 @@ export class Player {
 
   set average_km_per_game(value: number) {
     this._average_km_per_game = value;
+  }
+
+
+  get userId(): number {
+    return this._userId;
+  }
+
+  set userId(value: number) {
+    this._userId = value;
+  }
+
+  get playerId(): number {
+    return this._playerId;
+  }
+
+  set playerId(value: number) {
+    this._playerId = value;
+  }
+
+  get videosUrl(): string[] {
+    return this._videosUrl;
+  }
+
+  set videosUrl(value: string[]) {
+    this._videosUrl = value;
+  }
+
+  get image(): string {
+    return this._image;
+  }
+
+  set image(value: string) {
+    this._image = value;
   }
 }
