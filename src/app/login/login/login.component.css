@@ -52,6 +52,10 @@
   text-decoration: none;
 }
 
+.login-btn:hover{
+  cursor: pointer;
+}
+
 .sign-up-btn {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
