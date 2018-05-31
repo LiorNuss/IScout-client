@@ -4,8 +4,17 @@
   <span class="moto-color5_5 iscout-description">
     Here you will find everything about the most interesting players in the entire world
   </span>
-  <br/>
-  <br/>
+  <br />
+  <br />
+  <br />
+  <div class="container">
+    <div class="switch switch--horizontal">
+      <input id="radio-a" type="radio" name="first-switch" checked="checked"/>
+      <label for="radio-a">Scouter</label>
+      <input id="radio-b" type="radio" name="first-switch"/>
+      <label for="radio-b">Player</label><span class="toggle-outside"><span class="toggle-inside"></span></span>
+    </div>
+  </div>
   <span class="username">username</span>
   <input type="text" class="username-input" pInputText #username />
   <br/>
@@ -23,7 +32,7 @@
       </span>
     </a>
   </div>
-  <br/> <br/>
+  <br/>
   <h4>
     <div class="sign-up-btn">Not a Member yet? <a href="" (click)="registerClick()">Sign Up Here </a></div>
   </h4>

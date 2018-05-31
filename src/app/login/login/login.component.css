@@ -1,5 +1,5 @@
 .welcome-str {
-  margin-top: 5%;
+  margin-top: 1%;
 }
 
 .iscout-main-str {
@@ -12,14 +12,14 @@
 
 .username {
   position: relative;
-  right: 3.5%;
+  right: 2.5%;
   font-family: 'Open Sans', sans-serif;
 }
 
 .password {
   font-family: 'Open Sans', sans-serif;
   position: relative;
-  right: 3.5%;
+  right: 2.5%;
 }
 
 .ui-inputtext {
@@ -29,12 +29,12 @@
 
 .username-input {
   position: relative;
-  right: 3%;
+  right: 2%;
 }
 
 .password-input {
   position: relative;
-  right: 2.9%;
+  right: 1.9%;
 }
 
 .moto-widget-button .moto-widget-button-link.moto-size-medium {
