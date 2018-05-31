@@ -1,15 +1,22 @@
-<mat-toolbar class="tifoli-color">
-
-  <mat-toolbar-row>
-    <span>IScout <i class="far fa-futbol"></i></span>
-    <span class="example-spacer"></span>
-    <span class="example-icon home" (click)="profileClick()">Home</span>
-    <span class="example-icon profile" (click)="profileClick()">Profile</span>
-    <span class="example-icon searchEngine" (click)="searchPlayerClick()">Search Engine</span>
-    <span class="example-icon logout" (click)="loginClick()">Logout</span>
-
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="toolbar">
+  <ul class="toolbar-ul">
+    <li (click)="profileClick()" class="toolbar-li">
+      <a class="toolbar-a">
+        Home
+      </a>
+    </li>
+    <li (click)="profileClick()" class="toolbar-li">
+      <a class="toolbar-a">
+        Profile
+      </a>
+    </li>
+    <li (click)="loginClick()" class="toolbar-li">
+      <a class="toolbar-a">
+        Logout
+      </a>
+    </li>
+  </ul>
+</div>
 <app-player-registration *ngIf="registarion"> </app-player-registration>
 <app-player-profile *ngIf="profile"></app-player-profile>
 <app-search-player *ngIf="searchPlayer" (searchEvent)="searchResultsClick()"></app-search-player>

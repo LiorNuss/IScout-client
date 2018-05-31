@@ -5,3 +5,13 @@ body{
   background-color: #eff5f6;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
+.home {
+  background-image: url('./assets/mt-0966-header-bg.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+
