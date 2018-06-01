@@ -31,26 +31,26 @@ export class SearchRowComponent implements OnInit{
     // { name: 'Lemon' },
   ];
   searchCategoriesMapper = {
-     'תפקיד' : 'position',
-    'מדינה' : 'country',
-    'קבוצה' : 'team',
-    'גולים': 'goals'
+    'Position' : 'position',
+    'Country' : 'country',
+    'Team' : 'team',
+    'Goals': 'goals'
   };
 
   searchCategories = Object.keys(this.searchCategoriesMapper);
 
   roles = [
-    'שוער',
-    'מגן',
-    'קשר',
-    'חלוץ'
+    'Goalkeeper',
+    'Defender',
+    'Midfielder',
+    'Striker'
   ];
 
   country = [
-    'ישראל',
-    'אנגליה',
-    'איטליה',
-    'ספרד'
+    'Israel',
+    'England',
+    'Italy',
+    'Spain'
   ];
 
   // team = [
@@ -135,7 +135,7 @@ export class SearchRowComponent implements OnInit{
   addSearchFilter(tagValue: string) {
     let tagValueForSearch = tagValue.trim();
 
-    if (this.searchRowService.currentCategory === 'קבוצה') {
+    if (this.searchRowService.currentCategory === 'team') {
       tagValueForSearch = this.globalData.teamMapper.get(tagValue.trim()).toString();
     }
 

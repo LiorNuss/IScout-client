@@ -1,6 +1,9 @@
 .toolbar {
   background: none;
   color: white;
+  position: relative;
+  bottom: 17px;
+  right: 3%;
 }
 
 .toolbar-ul {

@@ -12,19 +12,19 @@ export class SearchRowService {
   private searchPlayersResults: Player[] = [];
 
   constructor(private playerDao: PlayerDaoService, private loginService: LoginService) {
-    this._allCategories.push('שם השחקן');
-    this._allCategories.push('גיל');
-    this._allCategories.push('רגל מועדפת');
-    this._allCategories.push('תפקיד');
-    this._allCategories.push('קבוצה');
-    this._allCategories.push('מדינה');
-    this._allCategories.push('גולים');
-    this._allCategories.push('בישולים');
-    this._allCategories.push('משחקים בהרכב');
-    this._allCategories.push('משחקים בספסל');
-    this._allCategories.push('כרטיסים צהובים');
-    this._allCategories.push('כרטיסים אדומים');
-    this._allCategories.push('ממוצע קילומטרים');
+    this._allCategories.push('Name');
+    this._allCategories.push('Age');
+    this._allCategories.push('Favourite Leg');
+    this._allCategories.push('Position');
+    this._allCategories.push('Team');
+    this._allCategories.push('Country');
+    this._allCategories.push('Goals');
+    this._allCategories.push('Assists');
+    this._allCategories.push('Games In Linup');
+    this._allCategories.push('Games From Bench');
+    this._allCategories.push('Yellow Cards');
+    this._allCategories.push('Red Cards');
+    this._allCategories.push('Average KM');
   }
 
   get currentCategory(): string {
