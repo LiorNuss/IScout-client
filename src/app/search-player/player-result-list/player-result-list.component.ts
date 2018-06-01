@@ -50,6 +50,9 @@ export class PlayerResultListComponent implements OnInit {
     player3.position = 'קשר';
     player3.goals = 15;
     player3.assists = 18;
+    player3.red_cards = 5;
+    player3.yellow_cards = 7;
+    player3.games_in_starting_linup = 34;
     this.players.push(player3);
 
     const player4 = new Player();
@@ -66,7 +69,7 @@ export class PlayerResultListComponent implements OnInit {
     this.players.push(player3);
     this.players.push(player3);
     this.players.push(player3);
-     this.players.push(player3);
+     // this.players.push(player3);
     // this.players.push(player3);
     // this.players.push(player3);
     // this.players.push(player3);
