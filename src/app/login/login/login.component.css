@@ -43,9 +43,13 @@
   min-width: 179px;
 }
 
-.moto-widget-button-label {
-  position: relative;
-  right: 0.2%;
+/*.moto-widget-button-label {*/
+  /*position: relative;*/
+  /*right: 0.2%;*/
+/*}*/
+
+.login-btn {
+  width:5%
 }
 
 .login-btn a {
@@ -56,13 +60,18 @@
   cursor: pointer;
 }
 
+.login-label {
+  position: relative;
+  right: 5%;
+}
+
 .sign-up-btn {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
 }
 
-.sign-up-btn a {
-  color: white;
+.sign-up-btn u:hover {
+  cursor: pointer;
 }
 
 
