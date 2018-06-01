@@ -16,3 +16,20 @@ input {
   position: relative;
   right: 5%;
 }
+
+.search-btn {
+  background-image: url("../../../assets/search.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  height: 45px;
+  width: 50px;
+  position: absolute;
+  right: 13%;
+  bottom: 68%;
+}
+
+.search-btn:hover {
+  cursor: pointer;
+}
