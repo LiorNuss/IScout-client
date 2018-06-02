@@ -5,7 +5,7 @@ import {Observable} from "rxjs";
 
 @Injectable()
 export class ServerConnectorService {
-  readonly serverUrl = 'http://localhost:3000/api/';
+  readonly serverUrl = 'http://10.0.0.11:3000/api/';
   constructor(private http: HttpClient) { }
 
   public getData(apiUrl: string, params?: any): Observable<any>{

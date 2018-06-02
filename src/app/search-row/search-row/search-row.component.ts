@@ -163,7 +163,7 @@ export class SearchRowComponent implements OnInit{
   addSearchFilter(tagValue: string) {
     let tagValueForSearch = tagValue.trim();
 
-    if (this.searchRowService.currentCategory === 'קבוצה') {
+    if (this.searchRowService.currentCategory === 'Team') {
       tagValueForSearch = this.globalData.teamNameToIdMapper.get(tagValue.trim()).toString();
     }
 

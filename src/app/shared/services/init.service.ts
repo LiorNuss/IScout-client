@@ -5,6 +5,22 @@ import {Team} from "../classes/team";
 
 @Injectable()
 export class InitService {
+  countryToImgMap = {
+    "Portugal" : 38,
+    "Argentina" : 52,
+    "Uruguay" : 60,
+    "Brazil" : 54,
+    "Germany" : 21,
+    "Wales" : 50,
+    "Spain" : 45,
+    "Sweden" : 46,
+    "Netherlands" : 34,
+    "Egypt" : 111,
+    "France" : 18,
+    "England" : 14,
+    "Italy" : 27,
+    "Israel" : 26
+  }
 
   constructor(private globalData: GlobalDataService,
               private serverConnector: ServerConnectorService) { }
@@ -32,6 +48,8 @@ export class InitService {
         else {
           this.globalData.countryToTeams.set(team.country, [team.name]);
         }
+
+        this.globalData.countries = Object.keys(this.countryToImgMap);
       });
       console.log(this.globalData.countryToTeams);
     });

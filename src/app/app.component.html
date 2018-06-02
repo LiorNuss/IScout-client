@@ -1,44 +1,53 @@
-<mat-toolbar class="tifoli-color">
+<div class="toolbar">
+  <nav>
+  <ul class="toolbar-ul">
+    <li  class="toolbar-li">
+      <a routerLink="/dashboard"  class="toolbar-a">
+        Home
+      </a>
+    </li>
+    <li  class="toolbar-li">
+      <a [routerLink]="['/profile', loginService.user.entityId]" *ngIf="loginService.user.type === 'player'" class="toolbar-a">
+        Profile
+      </a>
+    </li>
+    <li  class="toolbar-li">
+      <a  class="toolbar-a">
+        About
+      </a>
+    </li>
+    <li  class="toolbar-li">
+      <a (click)="logout()" *ngIf="loginService.user.id" class="toolbar-a">
+        Logout
+      </a>
+    </li>
+  </ul>
+  </nav>
+</div>
 
-  <mat-toolbar-row>
-    <span>IScout <i class="far fa-futbol"></i></span>
-    <span class="example-spacer"></span>
-    <nav>
-      <a routerLink="/dashboard"> Home </a>
-      <!--<span class="example-icon home" routerLink="/dashboard">Home</span>-->
-      <a [routerLink]="['/profile', loginService.user.entityId]"  class="example-icon logout" *ngIf="loginService.user.type === 'player'"> Profile </a>
-      <a> About</a>
-      <a  class="example-icon logout" (click)="logout()" *ngIf="loginService.user.id"> Logout </a>
-    </nav>
-    <router-outlet></router-outlet>
-    <!--<span class="example-icon home" (click)="profileClick()">Home</span>-->
-    <!--<span class="example-icon profile" (click)="profileClick()">Profile</span>-->
-    <!--<span class="example-icon searchEngine" (click)="searchPlayerClick()">Search Engine</span>-->
-    <!--<span class="example-icon logout" (click)="loginClick()">Logout</span>-->
+<!--<mat-toolbar class="tifoli-color">-->
 
-  </mat-toolbar-row>
-</mat-toolbar>
+  <!--<mat-toolbar-row>-->
+    <!--<span>IScout <i class="far fa-futbol"></i></span>-->
+    <!--<span class="example-spacer"></span>-->
+    <!--<nav>-->
+      <!--<a routerLink="/dashboard"> Home </a>-->
+      <!--&lt;!&ndash;<span class="example-icon home" routerLink="/dashboard">Home</span>&ndash;&gt;-->
+      <!--<a [routerLink]="['/profile', loginService.user.entityId]"  class="example-icon logout" *ngIf="loginService.user.type === 'player'"> Profile </a>-->
+      <!--<a> About</a>-->
+      <!--<a  class="example-icon logout" (click)="logout()" *ngIf="loginService.user.id"> Logout </a>-->
+    <!--</nav>-->
+    <!--<router-outlet></router-outlet>-->
+    <!--&lt;!&ndash;<span class="example-icon home" (click)="profileClick()">Home</span>&ndash;&gt;-->
+    <!--&lt;!&ndash;<span class="example-icon profile" (click)="profileClick()">Profile</span>&ndash;&gt;-->
+    <!--&lt;!&ndash;<span class="example-icon searchEngine" (click)="searchPlayerClick()">Search Engine</span>&ndash;&gt;-->
+    <!--&lt;!&ndash;<span class="example-icon logout" (click)="loginClick()">Logout</span>&ndash;&gt;-->
+
+  <!--</mat-toolbar-row>-->
+<!--</mat-toolbar>-->
 <router-outlet></router-outlet>
 
-<!--<div class="toolbar">-->
-  <!--<ul class="toolbar-ul">-->
-    <!--<li (click)="profileClick()" class="toolbar-li">-->
-      <!--<a class="toolbar-a">-->
-        <!--Home-->
-      <!--</a>-->
-    <!--</li>-->
-    <!--<li (click)="profileClick()" class="toolbar-li">-->
-      <!--<a class="toolbar-a">-->
-        <!--Profile-->
-      <!--</a>-->
-    <!--</li>-->
-    <!--<li (click)="loginClick()" class="toolbar-li">-->
-      <!--<a class="toolbar-a">-->
-        <!--Logout-->
-      <!--</a>-->
-    <!--</li>-->
-  <!--</ul>-->
-<!--</div>-->
+
 <!--<app-player-registration *ngIf="registarion"> </app-player-registration>-->
 <!--<app-player-profile *ngIf="profile"></app-player-profile>-->
 <!--<app-search-player *ngIf="searchPlayer" (searchEvent)="searchResultsClick()"></app-search-player>-->

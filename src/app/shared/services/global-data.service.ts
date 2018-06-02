@@ -6,21 +6,21 @@ export class GlobalDataService {
   private _teams: Team[] = [];
   private _countries: string[] = [];
   private _positions: string[] = [];
-  private _leg: string[] = ['ימין', 'שמאל'];
+  private _leg: string[] = ['Right', 'Left'];
   private _teamNameToIdMapper: Map<string, number> = new Map();
   private _teamIdToNameMapper: Map<number, string> = new Map();
   private _countryToTeams: Map<string, string[]> = new Map();
 
   constructor() {
     this.positions = [
-      'שוער',
-      'מגן',
-      'קשר',
-      'חלוץ'
+      'Goalkeeper',
+     'Defender',
+     'Midfielder',
+     'Striker'
     ];
   }
 
-
+''
   get teams(): Team[] {
     return this._teams;
   }

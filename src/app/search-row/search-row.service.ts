@@ -16,38 +16,38 @@ export class SearchRowService {
   private _autoCompleteOptions: Map<string, any[]> = new Map();
   currentAutoComplete = [];
   searchCategoriesMapper = {
-    'תפקיד' : 'position',
-    'מדינה' : 'country',
-    'קבוצה' : 'team',
-    'שם השחקן': 'name',
-    'גיל': 'age',
-    'רגל מועדפת': 'leg',
-    'גולים': 'goals',
-    'בישולים': 'assists',
-    'משחקים בהרכב': 'games_in_starting_linup',
-    'משחקים בספסל': 'games_entered_from_bench',
-    'כרטיסים צהובים': 'yellow_cards',
-    'כרטיסים אדומים': 'red_cards',
-    'ממוצע קילומטרים': 'average_km_per_game',
+    'Position' : 'position',
+    'Country' : 'country',
+    'Team' : 'team',
+    'Name': 'name',
+    'Age': 'age',
+    'Favourite Leg': 'leg',
+    'Goals': 'goals',
+    'Assists': 'assists',
+    'Games In Linup': 'games_in_starting_linup',
+    'Games From Bench': 'games_entered_from_bench',
+    'Yellow Cards': 'yellow_cards',
+    'Red Cards': 'red_cards',
+    'Average KM': 'average_km_per_game',
   };
 
   searchCategories = Object.keys(this.searchCategoriesMapper);
 
   constructor(private playerDao: PlayerDaoService, private loginService: LoginService, private globalData: GlobalDataService) {
     this._searchPlayersResults = [];
-    this._autoCompleteOptions.set('תפקיד', this.globalData.positions);
-    this._autoCompleteOptions.set('מדינה', this.globalData.countries);
-    this._autoCompleteOptions.set('קבוצה', Array.from(this.globalData.teamNameToIdMapper.keys()));
-    this._autoCompleteOptions.set('רגל מועדפת', this.globalData.leg);
-    this._autoCompleteOptions.set('שם השחקן', []);
-    this._autoCompleteOptions.set('גיל', []);
-    this._autoCompleteOptions.set('גולים', []);
-    this._autoCompleteOptions.set('בישולים', []);
-    this._autoCompleteOptions.set('משחקים בהרכב', []);
-    this._autoCompleteOptions.set('משחקים בספסל', []);
-    this._autoCompleteOptions.set('כרטיסים צהובים', []);
-    this._autoCompleteOptions.set('כרטיסים אדומים', []);
-    this._autoCompleteOptions.set('ממוצע קילומטרים', []);
+    this._autoCompleteOptions.set('Position', this.globalData.positions);
+    this._autoCompleteOptions.set('Country', this.globalData.countries);
+    this._autoCompleteOptions.set('Team', Array.from(this.globalData.teamNameToIdMapper.keys()));
+    this._autoCompleteOptions.set('Favourite Leg', this.globalData.leg);
+    this._autoCompleteOptions.set('Name', []);
+    this._autoCompleteOptions.set('Age', []);
+    this._autoCompleteOptions.set('Goals', []);
+    this._autoCompleteOptions.set('Assists', []);
+    this._autoCompleteOptions.set('Games In Linup', []);
+    this._autoCompleteOptions.set('Games From Bench', []);
+    this._autoCompleteOptions.set('Yellow Cards', []);
+    this._autoCompleteOptions.set('Red Cards', []);
+    this._autoCompleteOptions.set('Average KM', []);
     this.allCategories = this.searchCategories;
     this.currentAutoComplete = this.searchCategories;
   }
