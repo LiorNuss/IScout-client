@@ -1,5 +1,6 @@
 .demo-chip-list {
-  width: 100%;
+  width: 83%;
+  left: 8%;
 }
 input {
 
@@ -23,8 +24,8 @@ input {
   height: 45px;
   width: 50px;
   position: absolute;
-  right: 0%;
-  bottom: 68%;
+  right: 8%;
+  bottom: 61%;
 }
 
 .search-btn:hover {

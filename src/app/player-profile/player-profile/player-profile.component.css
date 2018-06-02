@@ -1,18 +1,111 @@
-.profile{
-  display: block;
-  margin-left:40%;
-}
-.example-card {
-  max-width: 400px;
+.profile-div {
+  display: inline-grid;
 }
 
-.example-header-image {
-  background-image: url('../../../assets/ronaldo1.jpeg');
-  background-size: cover;
+.main-pic {
+  width: 26%;
+  position: relative;
+  left: 2%;
+  border-radius: 10px;
 }
 
-/*.pic{*/
-  /*margin-left: 10%;*/
-  /*height: 300px;*/
-  /*width: 300px;*/
-/*}*/
+.basic-info {
+  height: 0;
+  margin: 0;
+  position: relative;
+  margin-top: 0;
+  bottom: 495px;
+  left: 33%;
+}
+
+.stats-info {
+  height: 0;
+  margin: 0;
+  position: relative;
+  margin-top: 0;
+  bottom: 495px;
+  left: 53%;
+}
+
+.table-info>tbody>tr>th {
+  background-color: transparent;
+}
+
+.table-info>tbody>tr>td {
+  background-color: transparent;
+}
+
+#info_content {
+  background-color: #151414a6;
+}
+
+#stats_content {
+  background-color: #151414a6;
+}
+
+.its-tabs {
+  background: #5dca197d;
+}
+
+.its-tabs>li.active {
+  color: white;
+}
+
+#info_content[_ngcontent-c13] {
+  background-color: #11090987;
+}
+
+#stats_content[_ngcontent-c13] {
+  background-color: #11090987;
+}
+
+.table-info>tbody>tr>th {
+  color: #f8f8f8;
+}
+
+.table-row-text {
+  color: white !important;
+}
+
+.info-table {
+  margin-bottom: 0;
+  display: inline-table;
+  height: 192px;
+}
+
+.stats-table {
+  margin-bottom: 0;
+  display: inline-table;
+  height: 202px;
+}
+
+.own-desc-text {
+  width: 26%;
+  height: 200px;
+  padding: 12px 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #66933559;
+  font-size: 16px;
+  resize: none;
+  margin-top: 17px;
+  position: relative;
+  left: 2%;
+  color: #c0b7b7;
+  font-weight: 800;
+}
+
+.edit-img {
+  width: 3%;
+  height: 34px;
+  position: relative;
+  top: 204px;
+  left: 24%;
+  z-index: 2;
+}
+
+.edit-img:hover {
+  cursor: pointer;
+}
