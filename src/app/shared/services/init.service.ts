@@ -15,17 +15,26 @@ export class InitService {
 
   public getTeams(): void {
     const teamsUrl = 'global/teams';
-    this.serverConnector.getData(teamsUrl).subscribe(teamsData =>
-    teamsData.forEach(teamData => {
-      let team = new Team();
-      team.id = teamData.id;
-      team.country = teamData.country;
-      team.name = teamData.name;
-      team.lat = teamData.lat;
-      team.lon = teamData.lon;
-      this.globalData.teams.push(team);
-      this.globalData.teamMapper.set(team.name, team.id);
-    }));
+    this.serverConnector.getData(teamsUrl).subscribe(teamsData => {
+      teamsData.forEach(teamData => {
+        let team = new Team();
+        team.id = teamData.id;
+        team.country = teamData.country;
+        team.name = teamData.name;
+        team.lat = teamData.lat;
+        team.lon = teamData.lon;
+        this.globalData.teams.push(team);
+        this.globalData.teamNameToIdMapper.set(team.name, team.id);
+        this.globalData.teamIdToNameMapper.set(team.id, team.name);
+        if (this.globalData.countryToTeams.has(team.country)) {
+          this.globalData.countryToTeams.get(team.country).push(team.name);
+        }
+        else {
+          this.globalData.countryToTeams.set(team.country, [team.name]);
+        }
+      });
+      console.log(this.globalData.countryToTeams);
+    });
   }
 
   // public getPlayerLogin(username: string, password: string): Observable<any> {

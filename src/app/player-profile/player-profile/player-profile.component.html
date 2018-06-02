@@ -1,60 +1,36 @@
-
+<div *ngIf="basicInfoLoaded && statsLoaded">
 <div class="profile">
-  <!--<h1> Player Profile</h1>-->
-  <!--<br>-->
-  <!--<h2> personal info:</h2>-->
-  <!--<table>-->
-    <!--<tr> <td> name:</td> <td> {{player.name}}</td></tr>-->
-    <!--<tr> <td> age:</td> <td> {{player.age}}</td></tr>-->
-    <!--<tr> <td> country:</td> <td> {{player.country}}</td></tr>-->
-    <!--<tr> <td> team:</td> <td> {{player.team}}</td></tr>-->
-    <!--<tr> <td> position:</td> <td> {{player.position}}</td></tr>-->
-    <!--<tr> <td> leg:</td> <td> {{player.leg}}</td></tr>-->
-    <!--<tr> <td> own_description:</td> <td> {{player.own_description}}</td></tr>-->
-  <!--</table>-->
-  <!--<br> <br>-->
-  <!--<h2> statistics</h2>-->
-  <!--<table>-->
-    <!--<tr> <td> year:</td> <td> {{player.year}}</td></tr>-->
-    <!--<tr> <td> goals:</td> <td> {{player.goals}}</td></tr>-->
-    <!--<tr> <td> assists:</td> <td> {{player.assists}}</td></tr>-->
-    <!--<tr> <td> average_km_per_game:</td> <td> {{player.average_km_per_game}}</td></tr>-->
-    <!--<tr> <td> games_in_starting_linup:</td> <td> {{player.games_in_starting_linup}}</td></tr>-->
-    <!--<tr> <td> games_entered_from_bench:</td> <td> {{player.games_entered_from_bench}}</td></tr>-->
-    <!--<tr> <td> red_cards:</td> <td> {{player.red_cards}}</td></tr>-->
-    <!--<tr> <td> yellow_cards:</td> <td> {{player.yellow_cards}}</td></tr>-->
-
-  <!--</table>-->
 <mat-card class="example-card">
-<mat-card-header>
-  <div mat-card-avatar class="example-header-image"></div>
-  <mat-card-title>{{player.name}}</mat-card-title>
-  <mat-card-subtitle>{{player.team}}</mat-card-subtitle>
-</mat-card-header>
-<img mat-card-image src="../../../assets/ronaldo2.jpeg" alt="player picture" class="pic">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{player.player_basic_Info.name}}</mat-card-title>
+    <mat-card-subtitle>{{teamName}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="../../../assets/ronaldo2.jpeg" alt="player picture" class="pic">
 <mat-card-content>
   <h2> Player info</h2>
   <table>
-  <tr> <td> name:</td> <td> {{player.name}}</td></tr>
-  <tr> <td> age:</td> <td> {{player.age}}</td></tr>
-  <tr> <td> country:</td> <td> {{player.country}}</td></tr>
-  <tr> <td> team:</td> <td> {{player.team}}</td></tr>
-  <tr> <td> position:</td> <td> {{player.position}}</td></tr>
-  <tr> <td> leg:</td> <td> {{player.leg}}</td></tr>
-  <tr> <td> own_description:</td> <td> {{player.own_description}}</td></tr>
+  <tr> <td> name:</td> <td> {{player.player_basic_Info.name}}</td></tr>
+  <tr> <td> age:</td> <td> {{player.player_basic_Info.age}}</td></tr>
+  <tr> <td> country:</td> <td> {{player.player_basic_Info.country}}</td></tr>
+  <tr> <td> team:</td> <td> {{teamName}}</td></tr>
+  <tr> <td> position:</td> <td> {{player.player_basic_Info.position}}</td></tr>
+  <tr> <td> leg:</td> <td> {{player.player_basic_Info.leg}}</td></tr>
+  <tr> <td> own_description:</td> <td> {{player.player_basic_Info.own_description}}</td></tr>
   </table>
   <br> <br>
   <h2> statistics</h2>
   <table>
-  <tr> <td> year:</td> <td> {{player.year}}</td></tr>
-  <tr> <td> goals:</td> <td> {{player.goals}}</td></tr>
-  <tr> <td> assists:</td> <td> {{player.assists}}</td></tr>
-  <tr> <td> average_km_per_game:</td> <td> {{player.average_km_per_game}}</td></tr>
-  <tr> <td> games_in_starting_linup:</td> <td> {{player.games_in_starting_linup}}</td></tr>
-  <tr> <td> games_entered_from_bench:</td> <td> {{player.games_entered_from_bench}}</td></tr>
-  <tr> <td> red_cards:</td> <td> {{player.red_cards}}</td></tr>
-  <tr> <td> yellow_cards:</td> <td> {{player.yellow_cards}}</td></tr>
+  <tr> <td> year:</td> <td> {{player.player_statistics[0].year}}</td></tr>
+  <tr> <td> goals:</td> <td> {{player.player_statistics[0].goals}}</td></tr>
+  <tr> <td> assists:</td> <td> {{player.player_statistics[0].assists}}</td></tr>
+  <tr> <td> average_km_per_game:</td> <td> {{player.player_statistics[0].average_km_per_game}}</td></tr>
+  <tr> <td> games_in_starting_linup:</td> <td> {{player.player_statistics[0].games_in_starting_linup}}</td></tr>
+  <tr> <td> games_entered_from_bench:</td> <td> {{player.player_statistics[0].games_entered_from_bench}}</td></tr>
+  <tr> <td> red_cards:</td> <td> {{player.player_statistics[0].red_cards}}</td></tr>
+  <tr> <td> yellow_cards:</td> <td> {{player.player_statistics[0].yellow_cards}}</td></tr>
   </table>
 </mat-card-content>
 </mat-card>
+</div>
 </div>

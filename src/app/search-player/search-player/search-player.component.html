@@ -1,56 +1,56 @@
-<div class="container">
-  <h1>Player Search Engine </h1>
-  <form (ngSubmit)="search()" #playerSearchForm="ngForm">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" #name="ngModel">
-    </div>
+<!--<div class="container">-->
+  <!--<h1>Player Search Engine </h1>-->
+  <!--<form (ngSubmit)="search()" #playerSearchForm="ngForm">-->
+    <!--<div class="form-group">-->
+      <!--<label for="name">Name</label>-->
+      <!--<input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" #name="ngModel">-->
+    <!--</div>-->
 
-    <div class="form-group">
-      <label for="age">Age</label>
-      <input type="number" min="16"  max="50" value="16" class="form-control" id="age" name="age" [(ngModel)]="model.age" #age="ngModel">
-    </div>
+    <!--<div class="form-group">-->
+      <!--<label for="age">Age</label>-->
+      <!--<input type="number" min="16"  max="50" value="16" class="form-control" id="age" name="age" [(ngModel)]="model.age" #age="ngModel">-->
+    <!--</div>-->
 
-    <label for="leg">Prefered foot</label>
-    <div class="form-group">
-      <select class="form-control" id="leg" name="leg" [(ngModel)]="model.leg" #leg="ngModel">
-        <option *ngFor="let leg of legs" [value] = leg> {{leg}}</option>
-      </select>
-    </div>
-    <br/>
+    <!--<label for="leg">Prefered foot</label>-->
+    <!--<div class="form-group">-->
+      <!--<select class="form-control" id="leg" name="leg" [(ngModel)]="model.leg" #leg="ngModel">-->
+        <!--<option *ngFor="let leg of legs" [value] = leg> {{leg}}</option>-->
+      <!--</select>-->
+    <!--</div>-->
+    <!--<br/>-->
 
-    <div class="form-group">
-      <label for="position">Position</label>
-      <select class="form-control" id="position" name="position" [(ngModel)]="model.position" #position="ngModel">
-        <option *ngFor="let position of positions" [value] = position> {{position}}</option>
-      </select>
-    </div>
+    <!--<div class="form-group">-->
+      <!--<label for="position">Position</label>-->
+      <!--<select class="form-control" id="position" name="position" [(ngModel)]="model.position" #position="ngModel">-->
+        <!--<option *ngFor="let position of positions" [value] = position> {{position}}</option>-->
+      <!--</select>-->
+    <!--</div>-->
 
-    <div class="form-group">
-      <label for="team">Team</label>
-      <select class="form-control" id="team" name="team"  [(ngModel)]="model.team" #team="ngModel">
-        <option *ngFor="let team of teams" [value] = team> {{team}}</option>
-      </select>
-    </div>
+    <!--<div class="form-group">-->
+      <!--<label for="team">Team</label>-->
+      <!--<select class="form-control" id="team" name="team"  [(ngModel)]="model.team" #team="ngModel">-->
+        <!--<option *ngFor="let team of teams" [value] = team> {{team}}</option>-->
+      <!--</select>-->
+    <!--</div>-->
 
-    <div class="form-group">
-      <label for="country">Country</label>
-      <select class="form-control" id="country" name="country"  [(ngModel)]="model.country" #country="ngModel">
-        <option *ngFor="let country of countries" [value] = country> {{country}}</option>
-      </select>
-    </div>
+    <!--<div class="form-group">-->
+      <!--<label for="country">Country</label>-->
+      <!--<select class="form-control" id="country" name="country"  [(ngModel)]="model.country" #country="ngModel">-->
+        <!--<option *ngFor="let country of countries" [value] = country> {{country}}</option>-->
+      <!--</select>-->
+    <!--</div>-->
 
-    <div class="form-group">
-      <label for="goals">Goals</label>
-      <input type="number" min="0" class="form-control" id="goals" name="goals" [(ngModel)]="model.goals" #goals="ngModel">
-    </div>
+    <!--<div class="form-group">-->
+      <!--<label for="goals">Goals</label>-->
+      <!--<input type="number" min="0" class="form-control" id="goals" name="goals" [(ngModel)]="model.goals" #goals="ngModel">-->
+    <!--</div>-->
 
-    <div class="form-group">
-      <label for="assists">Assists</label>
-      <input type="number" min="0" class="form-control" id="assists" name="assists" [(ngModel)]="model.assists" #assists="ngModel">
-    </div>
+    <!--<div class="form-group">-->
+      <!--<label for="assists">Assists</label>-->
+      <!--<input type="number" min="0" class="form-control" id="assists" name="assists" [(ngModel)]="model.assists" #assists="ngModel">-->
+    <!--</div>-->
 
 
-    <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
-  </form>
-</div>
+    <!--<button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>-->
+  <!--</form>-->
+<!--</div>-->

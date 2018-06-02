@@ -3,27 +3,36 @@
   <mat-toolbar-row>
     <span>IScout <i class="far fa-futbol"></i></span>
     <span class="example-spacer"></span>
-    <span class="example-icon home" (click)="profileClick()">Home</span>
-    <span class="example-icon profile" (click)="profileClick()">Profile</span>
-    <span class="example-icon searchEngine" (click)="searchPlayerClick()">Search Engine</span>
-    <span class="example-icon logout" (click)="loginClick()">Logout</span>
+    <nav>
+      <a routerLink="/dashboard"> Home </a>
+      <!--<span class="example-icon home" routerLink="/dashboard">Home</span>-->
+      <a [routerLink]="['/profile', loginService.user.entityId]"  class="example-icon logout" *ngIf="loginService.user.type === 'player'"> Profile </a>
+      <a> About</a>
+      <a  class="example-icon logout" (click)="logout()" *ngIf="loginService.user.id"> Logout </a>
+    </nav>
+    <router-outlet></router-outlet>
+    <!--<span class="example-icon home" (click)="profileClick()">Home</span>-->
+    <!--<span class="example-icon profile" (click)="profileClick()">Profile</span>-->
+    <!--<span class="example-icon searchEngine" (click)="searchPlayerClick()">Search Engine</span>-->
+    <!--<span class="example-icon logout" (click)="loginClick()">Logout</span>-->
 
   </mat-toolbar-row>
 </mat-toolbar>
-<app-player-registration *ngIf="registarion"> </app-player-registration>
-<app-player-profile *ngIf="profile"></app-player-profile>
-<app-search-player *ngIf="searchPlayer" (searchEvent)="searchResultsClick()"></app-search-player>
-<app-search-results *ngIf="searchResults"></app-search-results>
-<app-login *ngIf="login"  (login)="dashboardClick()" (register)="registrationClick()"></app-login>
-<!--<app-player-result-list></app-player-result-list>-->
-<!--<div class="list-headline-row-graph">-->
-  <!--<span class="list-headline">גרף שחקן</span>-->
-<!--</div>-->
-<!--<img class="graph-widget" src="../assets/radarImg.png">-->
-<!--<div class="list-headline-row-map">-->
-  <!--<span class="list-headline">מיקום שחקן</span>-->
-<!--</div>-->
-<!--<img class="map-widget" src="../assets/Google-Maps-696x365.jpg">-->
-<app-search-row *ngIf ="dashboard"></app-search-row>
-<app-player-result-list *ngIf ="dashboard"></app-player-result-list>
+<router-outlet></router-outlet>
+<!--<app-player-registration *ngIf="registarion"> </app-player-registration>-->
+<!--<app-player-profile *ngIf="profile"></app-player-profile>-->
+<!--<app-search-player *ngIf="searchPlayer" (searchEvent)="searchResultsClick()"></app-search-player>-->
+<!--<app-search-results *ngIf="searchResults"></app-search-results>-->
+<!--<app-login *ngIf="login"  (login)="dashboardClick()" (register)="registrationClick()"></app-login>-->
+<!--&lt;!&ndash;<app-player-result-list></app-player-result-list>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="list-headline-row-graph">&ndash;&gt;-->
+  <!--&lt;!&ndash;<span class="list-headline">גרף שחקן</span>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<img class="graph-widget" src="../assets/radarImg.png">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="list-headline-row-map">&ndash;&gt;-->
+  <!--&lt;!&ndash;<span class="list-headline">מיקום שחקן</span>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<img class="map-widget" src="../assets/Google-Maps-696x365.jpg">&ndash;&gt;-->
+<!--<app-search-row *ngIf ="dashboard"></app-search-row>-->
+<!--<app-player-result-list *ngIf ="dashboard"></app-player-result-list>-->
 <!--<<app-player-graph class="graph-widget"></app-player-graph>-->

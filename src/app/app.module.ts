@@ -11,6 +11,9 @@ import {LoginModule} from "./login/login.module";
 import {SearchRowModule} from "./search-row/search-row.module";
 import {PlayerGraphModule} from "./player-graph/player-graph.module";
 import {SharedModule} from "./shared/shared.module";
+import {AppRoutingModule} from "./app-routing.module";
+import {DashboardModule} from "./dashboard/dashboard.module";
+import {ScouterRegistrationModule} from "./scouter-registration/scouter-registration.module";
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import {SharedModule} from "./shared/shared.module";
     LoginModule,
     SearchRowModule,
     PlayerGraphModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule,
+    DashboardModule,
+    ScouterRegistrationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

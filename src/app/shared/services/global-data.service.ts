@@ -6,10 +6,19 @@ export class GlobalDataService {
   private _teams: Team[] = [];
   private _countries: string[] = [];
   private _positions: string[] = [];
-  private _prefferedFoot: string[] = [];
-  private _teamMapper: Map<string, number> = new Map();
+  private _leg: string[] = ['ימין', 'שמאל'];
+  private _teamNameToIdMapper: Map<string, number> = new Map();
+  private _teamIdToNameMapper: Map<number, string> = new Map();
+  private _countryToTeams: Map<string, string[]> = new Map();
 
-  constructor() { }
+  constructor() {
+    this.positions = [
+      'שוער',
+      'מגן',
+      'קשר',
+      'חלוץ'
+    ];
+  }
 
 
   get teams(): Team[] {
@@ -36,19 +45,37 @@ export class GlobalDataService {
     this._positions = value;
   }
 
-  get prefferedFoot(): string[] {
-    return this._prefferedFoot;
+
+  get leg(): string[] {
+    return this._leg;
   }
 
-  set prefferedFoot(value: string[]) {
-    this._prefferedFoot = value;
+  set leg(value: string[]) {
+    this._leg = value;
   }
 
-  set teamMapper(value: Map<string, number>) {
-    this._teamMapper = value;
+  set teamNameToIdMapper(value: Map<string, number>) {
+    this._teamNameToIdMapper = value;
   }
 
-  get teamMapper(): Map<string, number> {
-    return this._teamMapper;
+  get teamNameToIdMapper(): Map<string, number> {
+    return this._teamNameToIdMapper;
+  }
+
+
+  get teamIdToNameMapper(): Map<number, string> {
+    return this._teamIdToNameMapper;
+  }
+
+  set teamIdToNameMapper(value: Map<number, string>) {
+    this._teamIdToNameMapper = value;
+  }
+
+  get countryToTeams(): Map<string, string[]> {
+    return this._countryToTeams;
+  }
+
+  set countryToTeams(value: Map<string, string[]>) {
+    this._countryToTeams = value;
   }
 }

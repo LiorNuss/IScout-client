@@ -2,6 +2,7 @@ import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@a
 import {PlayerDaoService} from "../../player-utils/services/player-dao.service";
 import {Player} from "../../player-utils/entities/player";
 import {LoginService} from "../login.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -13,26 +14,28 @@ export class LoginComponent implements OnInit {
   @ViewChild('password') password: ElementRef;
   player: Player;
   @Output() login = new EventEmitter();
-  @Output() register = new EventEmitter();
+  userRole:boolean = true;
 
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   ngOnInit() {
   }
 
   onSubmit() {
-    // this.playerDao.getPlayerLogin(this.username.nativeElement.value, this.password.nativeElement.value).subscribe(playerData => {
-    //   this.player = playerData;
-    //   }
-    // );
-    //this.playerLoginService.playerLogin(this.username.nativeElement.value, this.password.nativeElement.value);
-    //this.scouterLoginService.scouterLogin(this.username.nativeElement.value, this.password.nativeElement.value);
-    this.loginService.playerLogin(this.username.nativeElement.value, this.password.nativeElement.value);
-    this.login.emit();
-
+    if (this.userRole) {
+      this.loginService.playerLogin(this.username.nativeElement.value, this.password.nativeElement.value);
+    }
+    else {
+      this.loginService.scouterLogin(this.username.nativeElement.value, this.password.nativeElement.value);
+    }
   }
 
   registerClick() {
-    this.register.emit();
+    if (this.userRole) {
+      this.router.navigate(['/playerRegistration']);
+    }
+    else {
+      this.router.navigate(['/scouterRegistration']);
+    }
   }
 }

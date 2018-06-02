@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import {User} from "../shared/classes/user";
 import {PlayerDaoService} from "../player-utils/services/player-dao.service";
 import {ScouterDaoService} from "../scouter-util/scouter-dao.service";
+import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from "@angular/router";
+import {Observable} from "rxjs";
 
 @Injectable()
 export class LoginService {
   private _user: User;
 
   constructor(private playerDao: PlayerDaoService,
-              private scouterDao: ScouterDaoService) {
+              private scouterDao: ScouterDaoService,
+              private router: Router) {
     this.user = new User();
   }
 
@@ -28,7 +31,10 @@ export class LoginService {
       this._user.type = "player";
       console.log(this._user.id);
       console.log(this._user.entityId);
-    });
+      this.router.navigate(['/dashboard']);
+    }, error => {
+
+    } );
   }
 
   public scouterLogin(username: string, password: string): void {
@@ -38,8 +44,7 @@ export class LoginService {
       this._user.type = "scouter";
       console.log(this._user.id);
       console.log(this._user.entityId);
+      this.router.navigate(['/dashboard']);
     });
   }
-
-
 }

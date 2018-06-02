@@ -10,6 +10,7 @@ import {DataScrollerModule} from 'primeng/datascroller';
 import { PlayerResultListComponent } from './player-result-list/player-result-list.component';
 import {DataListModule} from "primeng/primeng";
 import {MatToolbarModule, MatCardModule} from "@angular/material";
+import {SearchRowModule} from "../search-row/search-row.module";
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import {MatToolbarModule, MatCardModule} from "@angular/material";
     DataScrollerModule,
     DataListModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   declarations: [SearchPlayerComponent, SearchResultsComponent, PlayerResultComponent, PlayerResultListComponent],
   exports: [SearchPlayerComponent, SearchResultsComponent, PlayerResultListComponent],

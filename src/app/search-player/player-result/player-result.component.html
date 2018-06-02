@@ -1,4 +1,4 @@
-<div class="list-row">
+<div class="list-row" (click)="goToProfile()">
   <!--<img src="../../../assets/amir.jpg">-->
   <span class="image">
   <mat-card class="example-card ">
@@ -8,11 +8,11 @@
   </mat-card>
   </span>
   <span class="details-player">
-  <span class="player-name"> שם:  {{player.name}} </span>
-  <span class="player-age"> גיל: {{player.age}} </span>
-  <span class="player-position"> עמדה: {{player.position}} </span>
-  <span class="player-foot"> רגל: {{player.leg}} </span>
-  <span class="player-state"> מדינה: {{player.country}} </span>
-  <span class="player-team"> קבוצה: {{player.team}} </span>
+  <span class="player-name"> שם:  {{player.player_basic_Info.name}} </span>
+  <span class="player-age"> גיל: {{player.player_basic_Info.age}} </span>
+  <span class="player-position"> עמדה: {{player.player_basic_Info.position}} </span>
+  <span class="player-foot"> רגל: {{player.player_basic_Info.leg}} </span>
+  <span class="player-state"> מדינה: {{player.player_basic_Info.country}} </span>
+  <span class="player-team"> קבוצה: {{teamName}} </span>
     </span>
 </div>

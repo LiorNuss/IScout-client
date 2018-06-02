@@ -5,6 +5,7 @@ import {InputTextModule} from "primeng/primeng";
 import {PlayerUtilsModule} from "../player-utils/player-utils.module";
 import {ScouterUtilModule} from "../scouter-util/scouter-util.module";
 import {LoginService} from "./login.service";
+import {LoginGuardService} from "./login-guard.service";
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import {LoginService} from "./login.service";
   ],
   declarations: [LoginComponent],
   exports: [LoginComponent],
-  providers: [LoginService]
+  providers: [LoginService, LoginGuardService]
 })
 export class LoginModule { }
