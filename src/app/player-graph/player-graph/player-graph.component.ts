@@ -12,7 +12,7 @@ export class PlayerGraphComponent {
   private _player: Player;
   constructor(private globalData: GlobalDataService) {
     this.data = {
-      labels: ['גולים', 'בישולים', 'משחקים בהרכב', 'משחקים בספסל', 'כרטיסים צהובים', 'כרטיסים אדומים', 'ממוצע קילומטרים'],
+      labels: ['Goals', 'Assists', 'Games In Linup', 'Games From Bench', 'Yellow Cards', 'Red Cards', 'Average KM'],
       datasets: [
         {
           label: 'Player Stats',
