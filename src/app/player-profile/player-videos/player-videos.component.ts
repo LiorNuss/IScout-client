@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {VideoEdit} from "../classes/video-edit";
 import {DomSanitizer} from "@angular/platform-browser";
+import {PlayerDaoService} from "../../player-utils/services/player-dao.service";
+import {Player} from "../../player-utils/entities/player";
 
 @Component({
   selector: 'app-player-videos',
@@ -8,14 +10,18 @@ import {DomSanitizer} from "@angular/platform-browser";
   styleUrls: ['./player-videos.component.css']
 })
 export class PlayerVideosComponent implements OnInit {
+  @Input() player: Player;
   model: VideoEdit;
   videoPrefix = "https://www.youtube.com/embed/";
   videoFull: any;
 
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer, private playerDao: PlayerDaoService) { }
 
   ngOnInit() {
+    if (this.player.player_basic_Info.videos_url.length > 0) {
+      this.videoFull = this.sanitizer.bypassSecurityTrustResourceUrl(this.player.player_basic_Info.videos_url[0]);
+    }
   }
 
   videoUpload(videoUrl: string) {
@@ -23,10 +29,11 @@ export class PlayerVideosComponent implements OnInit {
     let index = videoUrl.lastIndexOf('=');
     let urlSuffix = videoUrl.substring(index + 1);
     let fullPath = this.videoPrefix + urlSuffix;
-    console.log("youtubeeeeee");
-    console.log(fullPath);
-    this.videoFull = this.sanitizer.bypassSecurityTrustResourceUrl(fullPath);
-    //console.log(this.videoFull);
+    this.playerDao.uploadVideo(this.player.player_basic_Info.player_id, fullPath).subscribe(() => {
+      console.log(fullPath);
+      this.videoFull = this.sanitizer.bypassSecurityTrustResourceUrl(fullPath);
+
+    });
   }
 
   onSubmit() {}

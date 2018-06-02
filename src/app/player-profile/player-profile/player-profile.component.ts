@@ -37,6 +37,7 @@ export class PlayerProfileComponent implements OnInit{
   getPlayer(userId: number, playerId: number) {
    this.playerDao.getPlayerInfo(userId, playerId).subscribe(playerInfo => {
      this.player.player_basic_Info = playerInfo;
+     this.player.player_basic_Info.player_id = playerId;
      this.teamName = this.globalData.teamIdToNameMapper.get(this.player.player_basic_Info.team);
      this.basicInfoLoaded = true;
    });

@@ -52,8 +52,16 @@ export class PlayerDaoService {
       "country": playerRegistrationInfo.country,
       "username": playerRegistrationInfo.username,
       "password": playerRegistrationInfo.password
-    }
+    };
     return this.serverConnector.postData(playerRegisterUrl, playerRegistrationToPost);
+  }
 
+  public uploadVideo(playerId: number, youtubeUrl: string): Observable<any>{
+    const videoUploadUrl = 'player/video';
+    const videoToPost = {
+      'player_id': playerId,
+      'youtube_url': youtubeUrl
+    };
+    return this.serverConnector.postData(videoUploadUrl, videoToPost);
   }
 }
