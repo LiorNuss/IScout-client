@@ -15,6 +15,10 @@
   margin-right: 1%;
 }
 
+.toolbar-li:focus {
+  outline: none;
+}
+
 .toolbar-a {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -35,4 +39,8 @@
 .toolbar-a:hover {
   color: #5fc44d;
   cursor: pointer;
+}
+
+.toolbar-a:focus {
+  outline: none;
 }
