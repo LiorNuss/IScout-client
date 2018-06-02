@@ -2,29 +2,36 @@
   <nav>
   <ul class="toolbar-ul">
     <li  class="toolbar-li">
-      <a routerLink="/dashboard"  class="toolbar-a">
+      <span routerLink="/dashboard"  class="toolbar-a">
         Home
-      </a>
+      </span>
     </li>
     <li  class="toolbar-li">
-      <a [routerLink]="['/profile', loginService.user.entityId]" *ngIf="loginService.user.type === 'player'" class="toolbar-a">
+      <span [routerLink]="['/profile', loginService.user.entityId]" *ngIf="loginService.user.type === 'player'" class="toolbar-a">
         Profile
-      </a>
+      </span>
     </li>
     <li  class="toolbar-li">
-      <a  class="toolbar-a">
+      <span  class="toolbar-a">
         About
-      </a>
+      </span>
     </li>
     <li  class="toolbar-li">
-      <a (click)="logout()" *ngIf="loginService.user.id" class="toolbar-a">
+      <span (click)="logout()" *ngIf="loginService.user.id" class="toolbar-a">
         Logout
-      </a>
+      </span>
     </li>
   </ul>
   </nav>
 </div>
-
+<router-outlet></router-outlet>
+<!--<iframe-->
+  <!--width="600"-->
+  <!--height="450"-->
+  <!--frameborder="0" style="border:0"-->
+  <!--src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBREESfAN4rzwKqyp-Gcp5YShQyXPHkcM0-->
+    <!--&q=Space+Needle,Seattle+WA" allowfullscreen>-->
+<!--</iframe>-->
 <!--<mat-toolbar class="tifoli-color">-->
 
   <!--<mat-toolbar-row>-->
@@ -45,7 +52,7 @@
 
   <!--</mat-toolbar-row>-->
 <!--</mat-toolbar>-->
-<router-outlet></router-outlet>
+
 
 
 <!--<app-player-registration *ngIf="registarion"> </app-player-registration>-->

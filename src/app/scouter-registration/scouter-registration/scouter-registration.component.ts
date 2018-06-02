@@ -35,14 +35,14 @@ export class ScouterRegistrationComponent implements OnInit {
     });
   }
 
-  selectCountry(country: string) {
-    this.disableTeamSelection = false;
-    console.log("selecteed country is: " + country);
-    this.teams = this.globalData.countryToTeams.get(country);
-  }
-
-  selectTeam(team: string) {
-    this.model.team_id = this.globalData.teamNameToIdMapper.get(team);
-  }
+  // selectCountry(country: string) {
+  //   this.disableTeamSelection = false;
+  //   console.log("selecteed country is: " + country);
+  //   this.teams = this.globalData.countryToTeams.get(country);
+  // }
+  //
+  // selectTeam(team: string) {
+  //   this.model.team_id = this.globalData.teamNameToIdMapper.get(team);
+  // }
 
 }

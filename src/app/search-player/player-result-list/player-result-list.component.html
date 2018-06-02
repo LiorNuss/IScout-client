@@ -1,6 +1,6 @@
-<span class="page-btn-pre"> < </span>
+<span class="page-btn-pre" (click)="pagePrev()"> < </span>
 <ul class="players-ul">
   <app-player-result *ngFor="let player of players" [player]="player">  </app-player-result>
 </ul>
-<span class="page-btn-next"> > </span>
+<span class="page-btn-next" (click)="pageNext()"> > </span>
 

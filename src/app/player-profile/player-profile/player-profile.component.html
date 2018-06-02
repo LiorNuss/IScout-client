@@ -1,36 +1,38 @@
 <div *ngIf="basicInfoLoaded && statsLoaded">
-<div class="profile">
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{player.player_basic_Info.name}}</mat-card-title>
-    <mat-card-subtitle>{{teamName}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="../../../assets/ronaldo2.jpeg" alt="player picture" class="pic">
-<mat-card-content>
-  <h2> Player info</h2>
-  <table>
-  <tr> <td> name:</td> <td> {{player.player_basic_Info.name}}</td></tr>
-  <tr> <td> age:</td> <td> {{player.player_basic_Info.age}}</td></tr>
-  <tr> <td> country:</td> <td> {{player.player_basic_Info.country}}</td></tr>
-  <tr> <td> team:</td> <td> {{teamName}}</td></tr>
-  <tr> <td> position:</td> <td> {{player.player_basic_Info.position}}</td></tr>
-  <tr> <td> leg:</td> <td> {{player.player_basic_Info.leg}}</td></tr>
-  <tr> <td> own_description:</td> <td> {{player.player_basic_Info.own_description}}</td></tr>
-  </table>
-  <br> <br>
-  <h2> statistics</h2>
-  <table>
-  <tr> <td> year:</td> <td> {{player.player_statistics[0].year}}</td></tr>
-  <tr> <td> goals:</td> <td> {{player.player_statistics[0].goals}}</td></tr>
-  <tr> <td> assists:</td> <td> {{player.player_statistics[0].assists}}</td></tr>
-  <tr> <td> average_km_per_game:</td> <td> {{player.player_statistics[0].average_km_per_game}}</td></tr>
-  <tr> <td> games_in_starting_linup:</td> <td> {{player.player_statistics[0].games_in_starting_linup}}</td></tr>
-  <tr> <td> games_entered_from_bench:</td> <td> {{player.player_statistics[0].games_entered_from_bench}}</td></tr>
-  <tr> <td> red_cards:</td> <td> {{player.player_statistics[0].red_cards}}</td></tr>
-  <tr> <td> yellow_cards:</td> <td> {{player.player_statistics[0].yellow_cards}}</td></tr>
-  </table>
-</mat-card-content>
-</mat-card>
-</div>
+<!--<div class="profile">-->
+<!--<mat-card class="example-card">-->
+  <!--<mat-card-header>-->
+    <!--<div mat-card-avatar class="example-header-image"></div>-->
+    <!--<mat-card-title>{{player.player_basic_Info.name}}</mat-card-title>-->
+    <!--<mat-card-subtitle>{{teamName}}</mat-card-subtitle>-->
+  <!--</mat-card-header>-->
+  <!--<img mat-card-image src="../../../assets/ronaldo2.jpeg" alt="player picture" class="pic">-->
+<!--<mat-card-content>-->
+  <!--<h2> Player info</h2>-->
+  <!--<table>-->
+  <!--<tr> <td> name:</td> <td> {{player.player_basic_Info.name}}</td></tr>-->
+  <!--<tr> <td> age:</td> <td> {{player.player_basic_Info.age}}</td></tr>-->
+  <!--<tr> <td> country:</td> <td> {{player.player_basic_Info.country}}</td></tr>-->
+  <!--<tr> <td> team:</td> <td> {{teamName}}</td></tr>-->
+  <!--<tr> <td> position:</td> <td> {{player.player_basic_Info.position}}</td></tr>-->
+  <!--<tr> <td> leg:</td> <td> {{player.player_basic_Info.leg}}</td></tr>-->
+  <!--<tr> <td> own_description:</td> <td> {{player.player_basic_Info.own_description}}</td></tr>-->
+  <!--</table>-->
+  <!--<br> <br>-->
+  <!--<h2> statistics</h2>-->
+  <!--<table>-->
+  <!--<tr> <td> year:</td> <td> {{player.player_statistics[0].year}}</td></tr>-->
+  <!--<tr> <td> goals:</td> <td> {{player.player_statistics[0].goals}}</td></tr>-->
+  <!--<tr> <td> assists:</td> <td> {{player.player_statistics[0].assists}}</td></tr>-->
+  <!--<tr> <td> average_km_per_game:</td> <td> {{player.player_statistics[0].average_km_per_game}}</td></tr>-->
+  <!--<tr> <td> games_in_starting_linup:</td> <td> {{player.player_statistics[0].games_in_starting_linup}}</td></tr>-->
+  <!--<tr> <td> games_entered_from_bench:</td> <td> {{player.player_statistics[0].games_entered_from_bench}}</td></tr>-->
+  <!--<tr> <td> red_cards:</td> <td> {{player.player_statistics[0].red_cards}}</td></tr>-->
+  <!--<tr> <td> yellow_cards:</td> <td> {{player.player_statistics[0].yellow_cards}}</td></tr>-->
+  <!--</table>-->
+<!--</mat-card-content>-->
+<!--</mat-card>-->
+<!--</div>-->
+  <app-player-videos></app-player-videos>
+  <!--<app-player-graph [player]="player"></app-player-graph>-->
 </div>

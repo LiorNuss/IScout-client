@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('password') password: ElementRef;
   player: Player;
   @Output() login = new EventEmitter();
-  userRole:boolean = true;
+  isPlayerLogin:boolean = false;
 
   constructor(private loginService: LoginService, private router: Router) {}
 
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.userRole) {
+    if (this.isPlayerLogin) {
       this.loginService.playerLogin(this.username.nativeElement.value, this.password.nativeElement.value);
     }
     else {
@@ -31,11 +31,21 @@ export class LoginComponent implements OnInit {
   }
 
   registerClick() {
-    if (this.userRole) {
+    if (this.isPlayerLogin) {
       this.router.navigate(['/playerRegistration']);
     }
     else {
       this.router.navigate(['/scouterRegistration']);
     }
+  }
+
+  playerClick() {
+    this.isPlayerLogin = true;
+    console.log("PLAYER CLICKEDDDDDDDDDD");
+  }
+
+  scouterClick() {
+    this.isPlayerLogin = false;
+    console.log("SCOUTER CLICKEDDDDDDDDDD");
   }
 }

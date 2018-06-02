@@ -14,6 +14,7 @@ export class SearchRowService {
   private _searchPlayersResults: Player[] = [];
   public searchResultEvent: Subject<any> = new Subject<any>();
   private _autoCompleteOptions: Map<string, any[]> = new Map();
+  public currentPage = 1;
   currentAutoComplete = [];
   searchCategoriesMapper = {
     'Position' : 'position',

@@ -9,9 +9,9 @@
   <br />
   <div class="container">
     <div class="switch switch--horizontal">
-      <input id="radio-a" type="radio" name="first-switch" checked="checked"/>
+      <input id="radio-a" type="radio" name="first-switch" checked="checked" (click)="scouterClick()" />
       <label for="radio-a">Scouter</label>
-      <input id="radio-b" type="radio" name="first-switch"/>
+      <input id="radio-b" type="radio" name="first-switch" (click)="playerClick()"/>
       <label for="radio-b">Player</label><span class="toggle-outside"><span class="toggle-inside"></span></span>
     </div>
   </div>
