@@ -1,38 +1,81 @@
-<div *ngIf="basicInfoLoaded && statsLoaded">
-<!--<div class="profile">-->
-<!--<mat-card class="example-card">-->
-  <!--<mat-card-header>-->
-    <!--<div mat-card-avatar class="example-header-image"></div>-->
-    <!--<mat-card-title>{{player.player_basic_Info.name}}</mat-card-title>-->
-    <!--<mat-card-subtitle>{{teamName}}</mat-card-subtitle>-->
-  <!--</mat-card-header>-->
-  <!--<img mat-card-image src="../../../assets/ronaldo2.jpeg" alt="player picture" class="pic">-->
-<!--<mat-card-content>-->
-  <!--<h2> Player info</h2>-->
-  <!--<table>-->
-  <!--<tr> <td> name:</td> <td> {{player.player_basic_Info.name}}</td></tr>-->
-  <!--<tr> <td> age:</td> <td> {{player.player_basic_Info.age}}</td></tr>-->
-  <!--<tr> <td> country:</td> <td> {{player.player_basic_Info.country}}</td></tr>-->
-  <!--<tr> <td> team:</td> <td> {{teamName}}</td></tr>-->
-  <!--<tr> <td> position:</td> <td> {{player.player_basic_Info.position}}</td></tr>-->
-  <!--<tr> <td> leg:</td> <td> {{player.player_basic_Info.leg}}</td></tr>-->
-  <!--<tr> <td> own_description:</td> <td> {{player.player_basic_Info.own_description}}</td></tr>-->
-  <!--</table>-->
-  <!--<br> <br>-->
-  <!--<h2> statistics</h2>-->
-  <!--<table>-->
-  <!--<tr> <td> year:</td> <td> {{player.player_statistics[0].year}}</td></tr>-->
-  <!--<tr> <td> goals:</td> <td> {{player.player_statistics[0].goals}}</td></tr>-->
-  <!--<tr> <td> assists:</td> <td> {{player.player_statistics[0].assists}}</td></tr>-->
-  <!--<tr> <td> average_km_per_game:</td> <td> {{player.player_statistics[0].average_km_per_game}}</td></tr>-->
-  <!--<tr> <td> games_in_starting_linup:</td> <td> {{player.player_statistics[0].games_in_starting_linup}}</td></tr>-->
-  <!--<tr> <td> games_entered_from_bench:</td> <td> {{player.player_statistics[0].games_entered_from_bench}}</td></tr>-->
-  <!--<tr> <td> red_cards:</td> <td> {{player.player_statistics[0].red_cards}}</td></tr>-->
-  <!--<tr> <td> yellow_cards:</td> <td> {{player.player_statistics[0].yellow_cards}}</td></tr>-->
-  <!--</table>-->
-<!--</mat-card-content>-->
-<!--</mat-card>-->
-<!--</div>-->
-  <app-player-videos></app-player-videos>
-  <!--<app-player-graph [player]="player"></app-player-graph>-->
+<div *ngIf="basicInfoLoaded && statsLoaded" class="profile-div">
+  <img src="../../../assets/ronaldo2.jpeg" class="main-pic">
+  <img src="../../../assets/edit.png" class="edit-img">
+  <textarea class="own-desc-text">Player own description...</textarea>
+  <div class="basic-info col-md-2 mobile-margin-bottom player-info-area info-col ">
+    <div id="player-bottom" style="display: none;"></div>
+    <ul class="inline its-tabs box-shadow" style="text-align:center;">
+      <li class="its notxtselect active" id="its_info" data-target="info_content">Info</li>
+    </ul>
+    <div id="info_content" class="box-shadow" style="display: block;">
+      <table class="info-table table  table-info" style="margin-bottom: 0;">
+
+        <tbody><tr class="">
+          <th>Name</th>
+          <td class="table-row-text">Luis Suárez</td>
+        </tr>
+        <tr class="">
+          <th>Team</th>
+          <td class="table-row-text"> FC Barcelona </td>
+        </tr>
+        <tr class="">
+          <th>Country</th>
+          <td class="table-row-text"> Uruguay </td>
+        </tr>
+        <tr class="">
+          <th>Leg <i class="icon-footprint"></i></th>
+          <td class="table-row-text">Right </td>
+        </tr>
+        <tr class="">
+          <th>Age</th>
+          <td class="table-row-text">30</td>
+        </tr>
+        <tr class="">
+          <th>Position</th>
+          <td class="table-row-text">Striker</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="stats-info col-md-2 mobile-margin-bottom player-info-area info-col ">
+    <div id="player-bottom2" style="display: none;"></div>
+    <ul class="inline its-tabs box-shadow" style="text-align:center;">
+      <li class="its notxtselect active" id="its_info2" data-target="info_content">Statistics</li>
+    </ul>
+    <div id="stats_content" class="box-shadow" style="display: block;">
+      <table class="stats-table table  table-info" style="margin-bottom: 0;">
+
+        <tbody><tr class="">
+          <th>Goals</th>
+          <td class="table-row-text">15</td>
+        </tr>
+        <tr class="">
+          <th>Assists</th>
+          <td class="table-row-text"> 9 </td>
+        </tr>
+        <tr class="">
+          <th>Games In Starting Linup</th>
+          <td class="table-row-text"> 7 </td>
+        </tr>
+        <tr class="">
+          <th>Games Entered From Bench </th>
+          <td class="table-row-text">5 </td>
+        </tr>
+        <tr class="">
+          <th>Red Cards</th>
+          <td class="table-row-text">30</td>
+        </tr>
+        <tr class="">
+          <th>Yellow Cards</th>
+          <td class="table-row-text">3</td>
+        </tr>
+        <tr class="">
+          <th>Average KM</th>
+          <td class="table-row-text">3.45</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
