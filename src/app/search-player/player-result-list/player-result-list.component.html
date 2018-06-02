@@ -1,7 +1,6 @@
-<div class="player-results-list">
-  <div class="list-headline-row">
-    <span class="list-headline">שחקנים מומלצים</span>
-  </div>
-    <app-player-result *ngFor="let player of players" [player]="player">  </app-player-result>
-</div>
+<span class="page-btn-pre"> < </span>
+<ul class="players-ul">
+  <app-player-result *ngFor="let player of players" [player]="player">  </app-player-result>
+</ul>
+<span class="page-btn-next"> > </span>
 

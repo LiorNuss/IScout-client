@@ -1,18 +1,41 @@
-<div class="list-row" (click)="goToProfile()">
-  <!--<img src="../../../assets/amir.jpg">-->
-  <span class="image">
-  <mat-card class="example-card ">
-    <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    </mat-card-header>
-  </mat-card>
-  </span>
-  <span class="details-player">
-  <span class="player-name"> שם:  {{player.player_basic_Info.name}} </span>
-  <span class="player-age"> גיל: {{player.player_basic_Info.age}} </span>
-  <span class="player-position"> עמדה: {{player.player_basic_Info.position}} </span>
-  <span class="player-foot"> רגל: {{player.player_basic_Info.leg}} </span>
-  <span class="player-state"> מדינה: {{player.player_basic_Info.country}} </span>
-  <span class="player-team"> קבוצה: {{teamName}} </span>
-    </span>
+<div id="cardlid1" data-formpos="ST" data-cardid="1" class="card cardnum ui-droppable added" (click)="goToProfile()">
+  <div class="cardetails" style="z-index: 0;">
+    <div style="z-index:22;" class="pcdisplay ut18 card-med  gold rare notxtselect active" data-player-id="6" data-player-skills="5" data-player-wf="4" data-player-height="185cm | 6'0" data-player-commom="Ronaldo" data-player-nation="38" data-player-club="243" data-player-league="53" data-loyalty="True" data-manager="0" data-formpos-original="LW" data-price-xbl="293000" data-price-ps3="323000" data-price-pc="323000" data-chem-style-name="hunter" data-short-chem-style-name="HUN" data-price-xbl-min="67000" data-price-xbl-max="1300000" data-price-ps3-min="77000" data-price-ps3-max="1500000" data-rare="1" data-rare-type="1" data-rating="94" data-price-pc-min="77000" data-price-pc-max="1500000" data-resourceid-id="20801" data-base-id="20801" data-resource-id="20801" data-untradeable="0">
+    <div style="color:#412b18 ;" class="pcdisplay-rat">ST</div>
+    <div style="color: rgb(65, 43, 24); display: block;" class="pcdisplay-name">Ronaldo</div>
+    <div class="pcdisplay-country mobile-hide">
+      <img style="" src="https://cdn.futbin.com/content/fifa18/img/nation/38.png">
+    </div>
+    <div class="pcdisplay-club mobile-hide">
+      <img src="https://cdn.futbin.com/content/fifa18/img/clubs/243.png">
+    </div>
+    <div class="pcdisplay-picture">
+      <img id="player_pic" src="https://cdn.futbin.com/content/fifa18/img/players/20801.png?v=8">
+    </div>
+    <div class="base-stats">
+      <div class="main-stat-diff main-stat-diff-1" data-stat="pace"></div>
+      <div class="pcdisplay-over pcdisplay-ovr1 stat-val" data-stat="pace" data-default="90" style="display: block;">{{player.age}}</div>
+      <div class="pcdisplay-over card-pace" style="display: block;">AGE</div>
+
+      <div class="main-stat-diff main-stat-diff-2" data-stat="shooting"></div>
+      <div class="pcdisplay-over pcdisplay-ovr2 stat-val" data-stat="shooting" data-default="93" style="display: block;">{{player.goals}}</div>
+      <div class="pcdisplay-over card-sho" style="display: block;">GOL</div>
+
+      <div class="main-stat-diff main-stat-diff-3" data-stat="passing"></div>
+      <div class="pcdisplay-over pcdisplay-ovr3 stat-val" data-stat="passing" data-default="82" style="display: block;">{{player.assists}}</div>
+      <div class="pcdisplay-over card-pas" style="display: block;">ASS</div>
+
+      <div class="main-stat-diff main-stat-diff-4" data-stat="dribblingp"></div>
+      <div class="pcdisplay-over pcdisplay-ovr4 stat-val" data-stat="dribblingp" data-default="90" style="display: block;">{{player.games_in_starting_linup}}</div>
+      <div class="pcdisplay-over card-dri" style="display: block;">OPN</div>
+
+      <div class="main-stat-diff main-stat-diff-5" data-stat="defending"></div>
+      <div class="pcdisplay-over pcdisplay-ovr5 stat-val" data-stat="defending" data-default="33" style="display: block;">{{player.red_cards}}</div>
+      <div class="pcdisplay-over card-def" style="display: block;">RED</div>
+
+      <div class="main-stat-diff main-stat-diff-6" data-stat="heading"></div>
+      <div class="pcdisplay-over pcdisplay-ovr6 stat-val" data-stat="heading" data-default="80" style="display: block;">{{player.yellow_cards}}</div>
+      <div class="pcdisplay-over card-phy" style="display: block;">YEL</div>
+    </div>
+  </div>
 </div>

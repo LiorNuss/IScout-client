@@ -1,12 +1,37 @@
 <div align="center">
-
-  <br> <br> <br> <br> <br> <br> <br> <br> <br>
-  <h1> Sign In</h1>
-<span>username</span> <span></span> <span></span> <span></span> <span></span><span><input type="text" pInputText #username /></span>
-<div></div>
-  <br>
-<span>password</span> <span></span><span></span><span></span><span></span> <span></span> <span></span> <span><input type="password" pInputText #password/></span>
-  <button (click)="onSubmit()"> התחבר</button>
-  <br> <br>
-  <h4> <a>Not a Member yet? <u (click)="registerClick()">Sign Up Here </u></a> </h4>
+  <p style="text-align: center;" class="moto-text_system_2 welcome-str">WELCOME TO</p>
+  <p style="text-align: center;" class="moto-text_system_1 iscout-main-str">• ISCOUT •</p>
+  <span class="moto-color5_5 iscout-description">
+    Here you will find everything about the most interesting players in the entire world
+  </span>
+  <br />
+  <br />
+  <br />
+  <div class="container">
+    <div class="switch switch--horizontal">
+      <input id="radio-a" type="radio" name="first-switch" checked="checked"/>
+      <label for="radio-a">Scouter</label>
+      <input id="radio-b" type="radio" name="first-switch"/>
+      <label for="radio-b">Player</label><span class="toggle-outside"><span class="toggle-inside"></span></span>
+    </div>
+  </div>
+  <span class="username">username</span>
+  <input type="text" class="username-input" pInputText #username />
+  <br/>
+  <br/>
+  <span class="password">password</span>
+  <input type="password" class="password-input" pInputText #password/>
+  <br/>
+  <br/>
+  <!--<button class="go-btn" (click)="onSubmit()"> GO </button>-->
+  <div data-widget-id="wid__button__5ac1cbb7c4d7b" class="login-btn moto-widget moto-widget-button moto-preset-default moto-align-center moto-align-center_mobile-h moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="button">
+    <a (click)="onSubmit()" data-action="page" class="moto-widget-button-link moto-size-medium moto-link">
+      <span class="fa moto-widget-theme-icon"></span>
+      <span class="login-label moto-widget-button-label">
+        Login
+      </span>
+    </a>
+  </div>
+  <br/>
+  <div class="sign-up-btn">Not a Member yet? <u (click)="registerClick()">Sign Up Here </u></div>
 </div>

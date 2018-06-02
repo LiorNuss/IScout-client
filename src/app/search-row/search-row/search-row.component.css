@@ -1,9 +1,32 @@
 .demo-chip-list {
-  width: 84.7%;
+  width: 100%;
 }
 input {
 
 }
 .search-comp{
-padding-right: 14%;
+  position: relative;
+  bottom: 20px;
+}
+
+.main-div-category {
+  display: inline-flex;
+  position: relative;
+}
+
+.search-btn {
+  background-image: url("../../../assets/search.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  height: 45px;
+  width: 50px;
+  position: absolute;
+  right: 0%;
+  bottom: 68%;
+}
+
+.search-btn:hover {
+  cursor: pointer;
 }

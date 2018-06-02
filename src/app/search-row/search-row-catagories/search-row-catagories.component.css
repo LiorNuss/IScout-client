@@ -8,3 +8,31 @@
 .ui-button-secondary{
   background-color: white;
 }
+
+.category-btn {
+  border-radius: 10px;
+  margin-right: 7px;
+  margin-bottom: 8px;
+  border:none;
+}
+
+button.category-btn.ui-button-secondary.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ng-star-inserted:hover{
+  background-color: rgba(95, 196, 77, 0.62);
+  border:none;
+}
+
+button.category-btn.ui-button-secondary.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ng-star-inserted {
+  background-color: #13111187;
+  border-color: #ccc;
+  color: white;
+}
+
+button.category-btn.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ng-star-inserted {
+  border: none;
+  background-color: rgba(95, 196, 77, 0.62);
+}
+
+button.category-btn.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ng-star-inserted.ui-button-success {
+  background-color: #5fc44d;
+}
+

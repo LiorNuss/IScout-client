@@ -1,65 +1,39 @@
-.example-icon {
-  padding: 0 14px;
+.toolbar {
+  background: none;
+  color: white;
+  position: relative;
+  bottom: 17px;
+  right: 3%;
 }
 
-.example-spacer {
-  flex: 1 1 auto;
+.toolbar-ul {
+  list-style: none;
 }
 
-.profile {
+.toolbar-li {
+  display: inline-block;
+  position: relative;
+  margin-right: 1%;
+}
+
+.toolbar-a {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: white;
+  text-decoration: none;
+  padding: 0;
+  letter-spacing: .5px;
+  font-size: 16px;
+  line-height: normal;
+  position: relative;
+  display: block;
+  text-align: left;
+  transition: .3s;
+  z-index: 1;
+}
+
+.toolbar-a:hover {
+  color: #5fc44d;
   cursor: pointer;
-}
-
-.home {
-  cursor: pointer;
-}
-
-.searchEngine {
-  cursor: pointer;
-}
-
-.logout {
-  cursor: pointer;
-}
-.graph-widget{
-  position: absolute;
-  top: 62%;
-  left: 30px;
-  height: 35%;
-  width: 48.5%;
-}
-.tifoli-color{
-  background-color: #1a6d7c;
-  color: #fafafa;
-}
-.map-widget{
-  position: absolute;
-  top: 36%;
-  width: 48.5%;
-  height: 33%;
-  left: 30px;
-}
-.list-headline-row-graph{
-  position: absolute;
-  height: 30px;
-  font-size: large;
-  width: 48.5%;
-  background-color: #e6edef;
-  border-bottom-color: #3dc1d6;
-  border-bottom-style: solid;
-  border-bottom-width: 3px;
-  top: 71%;
-  left: 30px;
-}
-.list-headline-row-map{
-  position: absolute;
-  height: 30px;
-  font-size: large;
-  width: 48.5%;
-  background-color: #e6edef;
-  border-bottom-color: #3dc1d6;
-  border-bottom-style: solid;
-  border-bottom-width: 3px;
-  top: 32%;
-  left: 30px;
 }

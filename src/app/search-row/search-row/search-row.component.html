@@ -6,16 +6,9 @@
     <!--{{item}} - (active) <i class="fa fa-user" style="margin-right:2em"></i>-->
   <!--</ng-template>-->
 <!--</p-chips>-->
-<i class="fab fa-sistrix"></i>
+<!--<i class="fab fa-sistrix"></i>-->
 <div class="search-comp">
-<app-search-row-title [currentCategory]="searchRowService.currentCategory"></app-search-row-title>
-<app-search-row-catagories [chosenCategories]="searchRowService.chosenCategories"
-                           [currentCategory]="searchRowService.currentCategory"
-                           [allCategories]="searchRowService.allCategories"
-                           (categoryClick)="changeCurrentCategory($event)" >
-
-</app-search-row-catagories>
-<mat-form-field class="demo-chip-list">
+  <mat-form-field class="demo-chip-list">
   <mat-chip-list #chipList>
     <mat-chip
       *ngFor="let fruit of fruits"
@@ -30,7 +23,7 @@
       #fruitInput
       [formControl]="fruitCtrl"
       [matAutocomplete]="auto"
-      placeholder="חפש"
+      placeholder="Search a star..."
       size="20"
       [matChipInputFor]="chipList"
       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
@@ -45,5 +38,12 @@
   </mat-autocomplete>
 </mat-form-field>
   <br>
-  <button (click)="search()"> חפש </button>
+  <app-search-row-catagories class="main-div-category" [chosenCategories]="searchRowService.chosenCategories"
+                             [currentCategory]="searchRowService.currentCategory"
+                             [allCategories]="searchRowService.allCategories"
+                             (categoryClick)="changeCurrentCategory($event)" >
+
+  </app-search-row-catagories>
+  <br>
+  <span (click)="search()" class="search-btn"> </span>
 </div>

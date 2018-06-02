@@ -1,0 +1,77 @@
+.welcome-str {
+  margin-top: 1%;
+}
+
+.iscout-main-str {
+  margin: 0;
+}
+
+.iscout-description {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.username {
+  position: relative;
+  right: 2.5%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.password {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  right: 2.5%;
+}
+
+.ui-inputtext {
+  background: #13111163;
+  color: white;
+}
+
+.username-input {
+  position: relative;
+  right: 2%;
+}
+
+.password-input {
+  position: relative;
+  right: 1.9%;
+}
+
+.moto-widget-button .moto-widget-button-link.moto-size-medium {
+  font-size: 16px;
+  padding: 12px 9px 15px;
+  min-width: 179px;
+}
+
+/*.moto-widget-button-label {*/
+  /*position: relative;*/
+  /*right: 0.2%;*/
+/*}*/
+
+.login-btn {
+  width:5%
+}
+
+.login-btn a {
+  text-decoration: none;
+}
+
+.login-btn:hover{
+  cursor: pointer;
+}
+
+.login-label {
+  position: relative;
+  right: 5%;
+}
+
+.sign-up-btn {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+.sign-up-btn u:hover {
+  cursor: pointer;
+}
+
+
