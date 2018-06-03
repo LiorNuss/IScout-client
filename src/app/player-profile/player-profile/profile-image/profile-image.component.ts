@@ -17,6 +17,9 @@ export class ProfileImageComponent implements OnInit {
     if (this.player.player_basic_Info.img) {
       this.imageUrl = this.player.player_basic_Info.img;
     }
+    else {
+      this.imageUrl = '../../../../assets/emptyman.png';
+    }
   }
 
   getImage(imageEvent: any) { // called each time file input changes
