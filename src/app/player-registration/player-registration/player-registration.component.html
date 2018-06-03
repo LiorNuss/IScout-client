@@ -3,6 +3,7 @@
   <form (ngSubmit)="onSubmit()" #playerRegistrationForm="ngForm">
     <div class="form-group">
       <label for="name">Name</label>
+      <br/>
       <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" #name="ngModel" required>
     </div>
     <div [hidden]="name.valid || name.pristine"
@@ -12,6 +13,7 @@
 
     <div class="form-group">
       <label for="age">Age</label>
+      <br/>
       <input type="number" min="16"  max="50" value="16" class="form-control" id="age" name="age" [(ngModel)]="model.age" #age="ngModel" required>
     </div>
 

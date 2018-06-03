@@ -109,3 +109,15 @@
 .edit-img:hover {
   cursor: pointer;
 }
+
+.player-graph-main {
+  position: relative;
+  left: 73%;
+  bottom: 558px;
+  width: 26%;
+}
+
+[_nghost-c14] {
+  background-color: azure;
+  box-shadow: none;
+}
