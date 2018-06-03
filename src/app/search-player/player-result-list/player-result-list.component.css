@@ -8,8 +8,9 @@
 
 .page-btn-pre {
   font-size: -webkit-xxx-large;
-  position: relative;
-  bottom: 17px;
+  position: absolute;
+  bottom: 35%;
+  left: 1%;
 }
 
 .page-btn-pre:hover {
@@ -17,9 +18,9 @@
 }
 
 .page-btn-next {
-  position: relative;
-  left: 6.5%;
-  bottom: 17px;
+  position: absolute;
+  bottom: 35%;
+  right: 32%;
   font-size: -webkit-xxx-large;
 }
 
