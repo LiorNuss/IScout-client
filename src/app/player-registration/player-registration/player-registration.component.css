@@ -17,3 +17,8 @@
   left: 36%;
   bottom: 333px;
 }
+
+select option {
+  background-color: black;
+  color: #fff;
+}

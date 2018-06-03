@@ -3,3 +3,8 @@
   background: #13111163;
   color: white;
 }
+
+select option {
+  background-color: black;
+  color: #fff;
+}
