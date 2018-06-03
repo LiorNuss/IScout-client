@@ -1,10 +1,18 @@
 <div class="container">
   <form (ngSubmit)="onSubmit()" #playerVideos="ngForm" [hidden]="!permissions">
     <div class="form-group">
-      <label for="video">Video Url</label>
-      <input  #videoInput type="text" class="form-control" placeholder="Copy link from youtube" id="video" name="video">
-      <button (click)="videoUpload(videoInput.value)"> upload video</button>
+      <label for="video" class="lbl">Video Url</label>
+      <input #videoInput type="text" class="form-control ipt" placeholder="Copy link from youtube" id="video" name="video">
+      <!--<button (click)="videoUpload(videoInput.value)"> upload video</button>-->
+      <div data-widget-id="wid__button__5ac1cbb7c4d7b" class="login-btn moto-widget moto-widget-button moto-preset-default moto-align-center moto-align-center_mobile-h moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="button">
+        <a (click)="videoUpload(videoInput.value)" data-action="page" class="moto-widget-button-link moto-size-medium moto-link">
+          <span class="fa moto-widget-theme-icon"></span>
+          <span class="login-label moto-widget-button-label">
+        Upload Video
+          </span>
+        </a>
+      </div>
     </div>
   </form>
-  <iframe *ngIf="isVideoExists" width="560" height="315" [src]="videoFull" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe *ngIf="isVideoExists" width="570" height="226" [src]="videoFull" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
