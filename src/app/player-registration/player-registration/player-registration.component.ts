@@ -43,7 +43,7 @@ export class PlayerRegistrationComponent implements OnInit {
   //   this.teams = this.globalData.countryToTeams.get(country);
   // }
   //
-  // selectTeam(team: string) {
-  //   this.model.team_id = this.globalData.teamNameToIdMapper.get(team);
-  // }
+  selectTeam(team: string) {
+    this.model.team_id = this.globalData.teamNameToIdMapper.get(team);
+  }
 }

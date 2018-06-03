@@ -49,7 +49,7 @@
 
     <div class="form-group second-line-input">
       <label for="team_name">Team</label>
-      <select class="form-control input" id="team_name" name="team_name" required [(ngModel)]="model.team_name"  #team_name="ngModel">
+      <select class="form-control input" id="team_name" name="team_name" required [(ngModel)]="model.team_name"  (ngModelChange)="selectTeam($event)" #team_name="ngModel">
         <option *ngFor="let team of teams" [value] = team> {{team}}</option>
       </select>
     </div>

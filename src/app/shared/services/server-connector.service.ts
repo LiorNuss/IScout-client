@@ -15,4 +15,8 @@ export class ServerConnectorService {
   public postData(apiUrl:string, data: any): Observable<any>{
     return this.http.post(this.serverUrl + apiUrl, data);
   }
+
+  public putData(apiUrl:string, data: any): Observable<any>{
+    return this.http.put(this.serverUrl + apiUrl, data);
+  }
 }
