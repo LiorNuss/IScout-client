@@ -2,7 +2,7 @@
   <form (ngSubmit)="onSubmit()" #playerVideos="ngForm">
     <div class="form-group">
       <label for="video">Video Url</label>
-      <input #videoInput type="text" class="form-control" placeholder="Copy link from youtube" id="video" name="video">
+      <input  #videoInput type="text" class="form-control" placeholder="Copy link from youtube" id="video" name="video">
       <button (click)="videoUpload(videoInput.value)"> upload video</button>
     </div>
   </form>

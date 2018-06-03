@@ -1,7 +1,7 @@
 <div *ngIf="basicInfoLoaded && statsLoaded" class="profile-div">
   <img src="../../../assets/ronaldo2.jpeg" class="main-pic">
-  <img src="../../../assets/edit.png" class="edit-img">
-  <textarea class="own-desc-text">Player own description...</textarea>
+  <img src="../../../assets/save.png" class="edit-img" (click)="saveDescription()">
+    <textarea [placeholder]="playerDescription" [(ngModel)]="playerDescription" #descriptionText class="own-desc-text" #descriptionText></textarea>
   <div class="basic-info col-md-2 mobile-margin-bottom player-info-area info-col ">
     <div id="player-bottom" style="display: none;"></div>
     <ul class="inline its-tabs box-shadow" style="text-align:center;">

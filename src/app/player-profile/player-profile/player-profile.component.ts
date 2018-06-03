@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {Player} from "../../player-utils/entities/player";
 import {PlayerDaoService} from "../../player-utils/services/player-dao.service";
 import {ActivatedRoute} from "@angular/router";
@@ -17,6 +17,8 @@ export class PlayerProfileComponent implements OnInit{
  basicInfoLoaded: boolean = false;
  statsLoaded: boolean = false;
  teamName:string;
+ permissions: boolean = false;
+ playerDescription: string = 'Player own description...';
 
  constructor(private router: ActivatedRoute,
              private playerDao: PlayerDaoService,
@@ -31,15 +33,27 @@ export class PlayerProfileComponent implements OnInit{
    console.log("visited profileeee");
    this.router.params.subscribe(params => {
      this.getPlayer(this.loginService.user.id, params['playerId']);
-   } );
+   });
   }
 
   getPlayer(userId: number, playerId: number) {
    this.playerDao.getPlayerInfo(userId, playerId).subscribe(playerInfo => {
      this.player.player_basic_Info = playerInfo;
      this.player.player_basic_Info.player_id = playerId;
+
+     if (this.player.player_basic_Info.own_description) {
+       this.playerDescription = this.player.player_basic_Info.own_description;
+     }
+
      this.teamName = this.globalData.teamIdToNameMapper.get(this.player.player_basic_Info.team);
      this.basicInfoLoaded = true;
+
+     if (this.loginService.user.entityId === this.player.player_basic_Info.player_id) {
+       this.permissions = true;
+     }
+     else {
+       this.permissions = false;
+     }
    });
 
     this.playerDao.getPlayerStats(playerId).subscribe(playerStats => {
@@ -52,6 +66,12 @@ export class PlayerProfileComponent implements OnInit{
     this.location.back();
   }
 
+  saveDescription(): void {
+   this.playerDao.saveOwnDescription(this.player.player_basic_Info.player_id, this.playerDescription).subscribe(() => {
+      // this.player.player_basic_Info.own_description = descriptionText;
+     }
+   );
+  }
 //
   // constructor(private playerDao: PlayerDaoService) {
   //   this.player = new Player();

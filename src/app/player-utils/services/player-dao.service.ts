@@ -64,4 +64,13 @@ export class PlayerDaoService {
     };
     return this.serverConnector.postData(videoUploadUrl, videoToPost);
   }
+
+  public saveOwnDescription(playerId: number, description: string): Observable<any>{
+    const playerDescriptionUrl = 'player/description';
+    const descriptionToPut = {
+      'own_description': description,
+      'player_id': playerId
+    };
+    return this.serverConnector.putData(playerDescriptionUrl, descriptionToPut);
+  }
 }
