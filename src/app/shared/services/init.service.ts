@@ -40,6 +40,7 @@ export class InitService {
         team.lat = teamData.lat;
         team.lon = teamData.lon;
         this.globalData.teams.push(team);
+        this.globalData.teamsMap.set(team.id, team);
         this.globalData.teamNameToIdMapper.set(team.name, team.id);
         this.globalData.teamIdToNameMapper.set(team.id, team.name);
         if (this.globalData.countryToTeams.has(team.country)) {

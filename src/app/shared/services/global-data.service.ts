@@ -4,6 +4,7 @@ import {Team} from "../classes/team";
 @Injectable()
 export class GlobalDataService {
   private _teams: Team[] = [];
+  private _teamsMap: Map<number, Team> = new Map();
   private _countries: string[] = [];
   private _positions: string[] = [];
   private _leg: string[] = ['Right', 'Left'];
@@ -86,5 +87,14 @@ export class GlobalDataService {
 
   set countryToTeams(value: Map<string, string[]>) {
     this._countryToTeams = value;
+  }
+
+
+  get teamsMap(): Map<number, Team> {
+    return this._teamsMap;
+  }
+
+  set teamsMap(value: Map<number, Team>) {
+    this._teamsMap = value;
   }
 }
