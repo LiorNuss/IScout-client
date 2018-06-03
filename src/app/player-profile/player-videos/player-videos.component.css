@@ -2,21 +2,21 @@
   background-color: #13111163;
   color: white;
   position: relative;
-  right: 26%;
-  top: 170px;
+  right: 32%;
+  top: 131px;
 }
 
 .lbl {
   position: relative;
-  right: 26%;
-  top: 166px;
+  right: 32%;
+  top: 131px;
 }
 
 .moto-widget-button {
   min-height: auto !important;
   position: relative;
-  right: 26%;
-  top: 166px;
+  right: 32%;
+  top: 131px;
 }
 
 .moto-widget-button:hover {

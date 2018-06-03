@@ -1,5 +1,11 @@
 <!--<p-fileUpload mode="basic" name="myfile[]" accept="image/*" customUpload="true" (uploadHandler)="myUploader($event)"></p-fileUpload>-->
 <!--<p-fileUpload mode="basic" name="demo[]"  accept="image/*"  (onUpload)="myUploader($event)" auto="true"></p-fileUpload>-->
 
-<img [src]=imageUrl >
-<input type='file' [ngClass]="{profileImg: !permissions}" (change)="getImage($event)" accept="image/*">
+<img [src]=imageUrl class="main-pic">
+
+<div class="image-upload">
+  <label for="file-input">
+    <img class="upload-ico" src="../../../../assets/uploadwhite.png"/>
+  </label>
+  <input id="file-input" type='file' [ngClass]="{profileImg: !permissions}" (change)="getImage($event)" accept="image/*">
+</div>

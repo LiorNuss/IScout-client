@@ -12,19 +12,19 @@
 
 .basic-info {
   height: 0;
-  margin: 0;
-  position: relative;
+  /* margin: 0; */
+  position: absolute;
   margin-top: 0;
-  bottom: 495px;
+  /* bottom: 495px; */
   left: 33%;
 }
 
 .stats-info {
   height: 0;
-  margin: 0;
-  position: relative;
+  /* margin: 0; */
+  position: absolute;
   margin-top: 0;
-  bottom: 495px;
+  /* bottom: 495px; */
   left: 53%;
 }
 
@@ -81,8 +81,8 @@
 }
 
 .own-desc-text {
-  width: 26%;
-  height: 200px;
+  width: 332.800px;
+  height: 214.938px;
   padding: 12px 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -96,14 +96,15 @@
   left: 2%;
   color: #c0b7b7;
   font-weight: 800;
+  bottom: 46px;
 }
 
 .edit-img {
   width: 3%;
   height: 34px;
   position: relative;
-  top: 204px;
-  left: 24%;
+  top: 180px;
+  left: 31%;
   z-index: 2;
 }
 
@@ -112,9 +113,9 @@
 }
 
 .player-graph-main {
-  position: relative;
+  position: absolute;
   left: 73%;
-  bottom: 558px;
+  top: 13px;
   width: 26%;
 }
 
@@ -132,8 +133,8 @@
 .playerVideo[_ngcontent-c15] {
   background: transparent;
   position: relative;
-  bottom: 655px;
-  left: 45%;
+  bottom: 403px;
+  left: 59%;
 }
 
 input#video {
@@ -149,4 +150,10 @@ button {
 
 .profileImgVisibility {
   visibility: hidden;
+}
+
+[_nghost-c17] {
+  background-color: transparent;
+  -webkit-box-shadow: 3px 3px 2px #888888;
+  box-shadow: none;
 }

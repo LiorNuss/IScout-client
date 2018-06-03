@@ -1,6 +1,6 @@
 <div *ngIf="basicInfoLoaded && statsLoaded" class="profile-div">
   <!--<img src="../../../assets/ronaldo2.jpeg" class="main-pic">-->
-  <app-profile-image class="main-pic" [player]="player" [permissions]="permissions"></app-profile-image>
+  <app-profile-image [player]="player" [permissions]="permissions"></app-profile-image>
   <img [ngClass]="{profileImgVisibility: !permissions}" src="../../../assets/save.png" class="edit-img" (click)="saveDescription()">
     <textarea [disabled]="!permissions" [placeholder]="playerDescription" [(ngModel)]="playerDescription" #descriptionText class="own-desc-text" #descriptionText></textarea>
   <div class="basic-info col-md-2 mobile-margin-bottom player-info-area info-col ">
