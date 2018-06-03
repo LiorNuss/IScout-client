@@ -31,3 +31,12 @@ input {
 .search-btn:hover {
   cursor: pointer;
 }
+
+.mat-option {
+  background-color: black;
+  color: #fff;
+}
+
+.mat-option:hover {
+background-color: rgba(160, 200, 62, 0.89)
+}
