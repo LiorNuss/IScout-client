@@ -14,12 +14,10 @@ import {SharedModule} from "./shared/shared.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {DashboardModule} from "./dashboard/dashboard.module";
 import {ScouterRegistrationModule} from "./scouter-registration/scouter-registration.module";
-import { RedirectComponent } from './redirect/redirect.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RedirectComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
