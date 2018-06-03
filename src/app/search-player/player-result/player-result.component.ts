@@ -109,6 +109,6 @@ export class PlayerResultComponent {
   }
 
   goToProfile() {
-    this.router.navigate(['/profile', this._player.player_basic_Info.player_id]);
+    this.router.navigate(['/profileOfDifferentPlayer', this._player.player_basic_Info.player_id]);
   }
 }

@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'playerRegistration', component: PlayerRegistrationComponent },
   { path: 'scouterRegistration', component: ScouterRegistrationComponent},
   { path: 'profile/:playerId', component: PlayerProfileComponent, canActivate: [LoginGuardService]  },
+  { path: 'profileOfDifferentPlayer/:playerId', component: PlayerProfileComponent, canActivate: [LoginGuardService]  },
   { path: '**', component: LoginComponent }
 ];
 
