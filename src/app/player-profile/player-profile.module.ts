@@ -6,6 +6,8 @@ import {MatCardModule} from "@angular/material";
 import {PlayerGraphModule} from "../player-graph/player-graph.module";
 import { PlayerVideosComponent } from './player-videos/player-videos.component';
 import {FormsModule} from "@angular/forms";
+import {ProfileImageComponent} from "./player-profile/profile-image/profile-image.component";
+import {FileUploadModule} from "primeng/primeng";
 
 @NgModule({
   imports: [
@@ -13,9 +15,10 @@ import {FormsModule} from "@angular/forms";
     PlayerUtilsModule,
     MatCardModule,
     PlayerGraphModule,
-    FormsModule
+    FormsModule,
+    FileUploadModule
   ],
-  declarations: [PlayerProfileComponent, PlayerVideosComponent],
+  declarations: [PlayerProfileComponent, PlayerVideosComponent, ProfileImageComponent],
   exports: [PlayerProfileComponent]
 })
 export class PlayerProfileModule { }

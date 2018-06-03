@@ -11,6 +11,7 @@ import {Player} from "../../player-utils/entities/player";
 })
 export class PlayerVideosComponent implements OnInit {
   @Input() player: Player;
+  @Input() permissions: boolean;
   model: VideoEdit;
   videoPrefix = "https://www.youtube.com/embed/";
   videoFull: any;

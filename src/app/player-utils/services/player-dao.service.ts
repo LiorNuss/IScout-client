@@ -73,4 +73,13 @@ export class PlayerDaoService {
     };
     return this.serverConnector.putData(playerDescriptionUrl, descriptionToPut);
   }
+
+  public uploadImage(playerId: number, pictureUrl: string): Observable<any>{
+    const imageUploadUrl = 'player/picture';
+    const imageToPost = {
+      'player_id': playerId,
+      'picture_str': pictureUrl
+    };
+    return this.serverConnector.postData(imageUploadUrl, imageToPost);
+  }
 }

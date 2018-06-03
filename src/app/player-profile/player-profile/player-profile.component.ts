@@ -46,14 +46,15 @@ export class PlayerProfileComponent implements OnInit{
      }
 
      this.teamName = this.globalData.teamIdToNameMapper.get(this.player.player_basic_Info.team);
-     this.basicInfoLoaded = true;
-
-     if (this.loginService.user.entityId === this.player.player_basic_Info.player_id) {
+     if (this.loginService.user.entityId == this.player.player_basic_Info.player_id) {
        this.permissions = true;
      }
      else {
        this.permissions = false;
      }
+
+     this.basicInfoLoaded = true;
+
    });
 
     this.playerDao.getPlayerStats(playerId).subscribe(playerStats => {
@@ -67,10 +68,12 @@ export class PlayerProfileComponent implements OnInit{
   }
 
   saveDescription(): void {
-   this.playerDao.saveOwnDescription(this.player.player_basic_Info.player_id, this.playerDescription).subscribe(() => {
-      // this.player.player_basic_Info.own_description = descriptionText;
-     }
-   );
+   if (this.permissions) {
+     this.playerDao.saveOwnDescription(this.player.player_basic_Info.player_id, this.playerDescription).subscribe(() => {
+         // this.player.player_basic_Info.own_description = descriptionText;
+       }
+     );
+   }
   }
 //
   // constructor(private playerDao: PlayerDaoService) {

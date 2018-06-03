@@ -40,3 +40,7 @@ input {
 .mat-option:hover {
 background-color: rgba(160, 200, 62, 0.89)
 }
+
+md-input-container label {
+  color: red;
+}
