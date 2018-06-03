@@ -3,8 +3,7 @@
   <form (ngSubmit)="onSubmit()" #playerRegistrationForm="ngForm">
     <div class="form-group">
       <label for="name">Name</label>
-      <br/>
-      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" #name="ngModel" required>
+      <input type="text" class="form-control input" id="name" name="name" [(ngModel)]="model.name" #name="ngModel" required>
     </div>
     <div [hidden]="name.valid || name.pristine"
          class="alert alert-danger">
@@ -13,20 +12,19 @@
 
     <div class="form-group">
       <label for="age">Age</label>
-      <br/>
-      <input type="number" min="16"  max="50" value="16" class="form-control" id="age" name="age" [(ngModel)]="model.age" #age="ngModel" required>
+      <input type="number" min="16"  max="50" value="16" class="form-control input" id="age" name="age" [(ngModel)]="model.age" #age="ngModel" required>
     </div>
 
     <div class="form-check">
       <label>Prefered Foot</label>
-      <div>
+      <div class="foot-div">
       <span class="form-check">
         <input class="form-check-input" type="radio" name="leg" id="Right" value="Right"  [(ngModel)]="model.leg" #leg="ngModel" required checked>
         <label class="form-check-label" for="Right">
          Right
         </label>
       </span>
-      <span class="form-check">
+      <span class="form-check left-foot-span">
         <input class="form-check-input" type="radio" name="leg" id="Left" value="Left" [(ngModel)]="model.leg" #leg="ngModel" required>
         <label class="form-check-label" for="Left">
           Left
@@ -34,39 +32,38 @@
       </span>
     </div>
     </div>
-    <br/>
 
     <div class="form-group">
       <label for="position">Position</label>
-      <select class="form-control" id="position" name="position" required [(ngModel)]="model.position" #position="ngModel">
+      <select class="form-control input" id="position" name="position" required [(ngModel)]="model.position" #position="ngModel">
         <option *ngFor="let position of positions" [value] = position> {{position}}</option>
       </select>
     </div>
 
     <div class="form-group">
       <label for="country">Country</label>
-      <select class="form-control" id="country" name="country" required [(ngModel)]="model.country"  #country="ngModel">
+      <select class="form-control input" id="country" name="country" required [(ngModel)]="model.country"  #country="ngModel">
         <option *ngFor="let country of countries" [value] = country> {{country}}</option>
       </select>
     </div>
 
-    <div class="form-group">
+    <div class="form-group second-line-input">
       <label for="team_name">Team</label>
-      <select class="form-control" id="team_name" name="team_name" required [(ngModel)]="model.team_name"  #team_name="ngModel">
+      <select class="form-control input" id="team_name" name="team_name" required [(ngModel)]="model.team_name"  #team_name="ngModel">
         <option *ngFor="let team of teams" [value] = team> {{team}}</option>
       </select>
     </div>
 
-    <div class="form-group">
+    <div class="form-group second-line-input">
       <label for="username">Username</label>
-      <input type="text" class="form-control" id="username" name="username" required [(ngModel)]="model.username" #username="ngModel" minlength="6">
+      <input type="text" class="form-control input" id="username" name="username" required [(ngModel)]="model.username" #username="ngModel" minlength="6">
     </div>
 
-    <div class="form-group">
+    <div class="form-group second-line-input">
       <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" name="password" required  [(ngModel)]="model.password" #password="ngModel" minlength="6">
+      <input type="password" class="form-control input" id="password" name="password" required  [(ngModel)]="model.password" #password="ngModel" minlength="6">
     </div>
 
-    <button type="submit" class="btn btn-success" [disabled]="playerRegistrationForm.invalid">Submit</button>
+    <button type="submit" class="btn btn-success second-line-input" [disabled]="playerRegistrationForm.invalid">Submit</button>
   </form>
 </div>

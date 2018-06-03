@@ -1,1 +1,19 @@
-@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+.input {
+  width: 200px;
+  background: #13111163;
+  color: white;
+}
+
+.foot-div {
+  display: inline-flex;
+}
+
+.left-foot-span {
+  margin-left: 7px;
+}
+
+.second-line-input {
+  position: relative;
+  left: 36%;
+  bottom: 333px;
+}
