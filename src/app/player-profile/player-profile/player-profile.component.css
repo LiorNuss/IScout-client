@@ -3,11 +3,11 @@
 }
 
 .main-pic {
-  width: 332.8px;
+  width: 453.8px;
   position: relative;
   left: 2%;
   border-radius: 10px;
-  height: 237.94px;
+  height: 395.94px;
 }
 
 .basic-info {
@@ -30,10 +30,12 @@
 
 .table-info>tbody>tr>th {
   background-color: transparent;
+  font-size: 18px;
 }
 
 .table-info>tbody>tr>td {
   background-color: transparent;
+  font-size: 18px !important;
 }
 
 #info_content {
@@ -46,6 +48,10 @@
 
 .its-tabs {
   background: #5dca197d;
+}
+
+.its-tabs>li {
+  font-size: 23px;
 }
 
 .its-tabs>li.active {
@@ -71,18 +77,18 @@
 .info-table {
   margin-bottom: 0;
   display: inline-table;
-  height: 192px;
+  height: 353px;
 }
 
 .stats-table {
   margin-bottom: 0;
   display: inline-table;
-  height: 202px;
+  height: 362.29px;
 }
 
 .own-desc-text {
-  width: 332.800px;
-  height: 214.938px;
+  width: 453.8px;
+  height: 322.93px;
   padding: 12px 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -103,8 +109,8 @@
   width: 3%;
   height: 34px;
   position: relative;
-  top: 180px;
-  left: 31%;
+  top: 287px;
+  left: 42%;
   z-index: 2;
 }
 
@@ -114,8 +120,8 @@
 
 .player-graph-main {
   position: absolute;
-  left: 73%;
-  top: 13px;
+  left: 77%;
+  top: 115px;
   width: 26%;
 }
 
@@ -133,8 +139,8 @@
 .playerVideo[_ngcontent-c15] {
   background: transparent;
   position: relative;
-  bottom: 403px;
-  left: 59%;
+  bottom: 510px;
+  left: 82.5%;
 }
 
 input#video {
