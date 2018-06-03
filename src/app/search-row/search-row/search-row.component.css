@@ -13,6 +13,7 @@ input {
 .main-div-category {
   display: inline-flex;
   position: relative;
+  left: 8.5%;
 }
 
 .search-btn {

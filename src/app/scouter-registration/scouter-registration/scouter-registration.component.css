@@ -1,5 +1,5 @@
 .input {
-  width: 200px;
+  width: 259px;
   background: #13111163;
   color: white;
 }
@@ -7,4 +7,10 @@
 select option {
   background-color: black;
   color: #fff;
+}
+
+.main-form-reg {
+  margin-left: 40%;
+  position: relative;
+  top: 40px;
 }

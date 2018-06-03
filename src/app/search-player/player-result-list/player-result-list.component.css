@@ -1,7 +1,7 @@
 .players-ul {
   display: inline-flex;
   position: relative;
-  top: 70px;
+  top: 152px;
   left: 3%;
   margin:0;
 }
@@ -9,7 +9,7 @@
 .page-btn-pre {
   font-size: -webkit-xxx-large;
   position: absolute;
-  bottom: 35%;
+  bottom: 41%;
   left: 1%;
 }
 
@@ -19,8 +19,8 @@
 
 .page-btn-next {
   position: absolute;
-  bottom: 35%;
-  right: 43%;
+  bottom: 41%;
+  right: 38%;
   font-size: -webkit-xxx-large;
 }
 

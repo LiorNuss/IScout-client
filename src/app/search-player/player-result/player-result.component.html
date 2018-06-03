@@ -1,41 +1,41 @@
-<div id="cardlid1" data-formpos="ST" data-cardid="1" class="card cardnum ui-droppable added" (click)="goToProfile()">
+<div id="cardlid1" data-formpos="ST" data-cardid="1" class="card cardnum ui-droppable added card-hover" (click)="goToProfile()">
   <div class="cardetails" style="z-index: 0;">
-    <div style="z-index:22;" class="pcdisplay ut18 card-med  gold rare notxtselect active" data-player-id="6" data-player-skills="5" data-player-wf="4" data-player-height="185cm | 6'0" data-player-commom="Ronaldo" data-player-nation="38" data-player-club="243" data-player-league="53" data-loyalty="True" data-manager="0" data-formpos-original="LW" data-price-xbl="293000" data-price-ps3="323000" data-price-pc="323000" data-chem-style-name="hunter" data-short-chem-style-name="HUN" data-price-xbl-min="67000" data-price-xbl-max="1300000" data-price-ps3-min="77000" data-price-ps3-max="1500000" data-rare="1" data-rare-type="1" data-rating="94" data-price-pc-min="77000" data-price-pc-max="1500000" data-resourceid-id="20801" data-base-id="20801" data-resource-id="20801" data-untradeable="0">
+    <div style="z-index:22;" class="pcdisplay ut18 card-regular gold rare notxtselect active" data-player-id="6" data-player-skills="5" data-player-wf="4" data-player-height="185cm | 6'0" data-player-commom="Ronaldo" data-player-nation="38" data-player-club="243" data-player-league="53" data-loyalty="True" data-manager="0" data-formpos-original="LW" data-price-xbl="293000" data-price-ps3="323000" data-price-pc="323000" data-chem-style-name="hunter" data-short-chem-style-name="HUN" data-price-xbl-min="67000" data-price-xbl-max="1300000" data-price-ps3-min="77000" data-price-ps3-max="1500000" data-rare="1" data-rare-type="1" data-rating="94" data-price-pc-min="77000" data-price-pc-max="1500000" data-resourceid-id="20801" data-base-id="20801" data-resource-id="20801" data-untradeable="0">
     <div style="color:#412b18 ;" class="pcdisplay-rat">{{position}}</div>
     <div style="color: rgb(65, 43, 24); display: block;" class="pcdisplay-name">{{lastName}}</div>
-    <div class="pcdisplay-country mobile-hide">
+    <div class="pcdisplay-country">
       <img style="" src="{{countryImgPath}}">
     </div>
-    <div class="pcdisplay-club mobile-hide">
+    <div class="pcdisplay-club">
       <img src="{{clubPath}}">
     </div>
     <div class="pcdisplay-picture">
-      <img id="player_pic" src="{{imgFullPath}}">
+      <img class="pcdisplay-picture-width" id="player_pic" src="{{imgFullPath}}">
     </div>
-    <div class="base-stats">
+    <div class="ovrhover">
       <div class="main-stat-diff main-stat-diff-1" data-stat="pace"></div>
-      <div class="pcdisplay-over pcdisplay-ovr1 stat-val" data-stat="pace" data-default="90" style="display: block;">{{player.player_basic_Info.age}}</div>
-      <div class="pcdisplay-over card-pace" style="display: block;">AGE</div>
+      <div class="pcdisplay-ovr1 stat-val" data-stat="pace" data-default="90" style="display: block;">{{player.player_basic_Info.age}}</div>
+      <div class="pcdisplay-card-pace" style="display: block;">AGE</div>
 
       <div class="main-stat-diff main-stat-diff-2" data-stat="shooting"></div>
-      <div class="pcdisplay-over pcdisplay-ovr2 stat-val" data-stat="shooting" data-default="93" style="display: block;">{{player.player_statistics[0].goals}}</div>
-      <div class="pcdisplay-over card-sho" style="display: block;">GOL</div>
+      <div class="pcdisplay-ovr2 stat-val" data-stat="shooting" data-default="93" style="display: block;">{{player.player_statistics[0].goals}}</div>
+      <div class="pcdisplay-card-shoo" style="display: block;">GOL</div>
 
       <div class="main-stat-diff main-stat-diff-3" data-stat="passing"></div>
-      <div class="pcdisplay-over pcdisplay-ovr3 stat-val" data-stat="passing" data-default="82" style="display: block;">{{player.player_statistics[0].assists}}</div>
-      <div class="pcdisplay-over card-pas" style="display: block;">ASS</div>
+      <div class="pcdisplay-ovr3 stat-val" data-stat="passing" data-default="82" style="display: block;">{{player.player_statistics[0].assists}}</div>
+      <div class="pcdisplay-card-pas" style="display: block;">ASS</div>
 
       <div class="main-stat-diff main-stat-diff-4" data-stat="dribblingp"></div>
-      <div class="pcdisplay-over pcdisplay-ovr4 stat-val" data-stat="dribblingp" data-default="90" style="display: block;">{{player.player_statistics[0].games_in_starting_linup}}</div>
-      <div class="pcdisplay-over card-dri" style="display: block;">OPN</div>
+      <div class="pcdisplay-ovr4 stat-val" data-stat="dribblingp" data-default="90" style="display: block;">{{player.player_statistics[0].games_in_starting_linup}}</div>
+      <div class="pcdisplay-card-dri" style="display: block;">OPN</div>
 
       <div class="main-stat-diff main-stat-diff-5" data-stat="defending"></div>
-      <div class="pcdisplay-over pcdisplay-ovr5 stat-val" data-stat="defending" data-default="33" style="display: block;">{{player.player_statistics[0].red_cards}}</div>
-      <div class="pcdisplay-over card-def" style="display: block;">RED</div>
+      <div class="pcdisplay-ovr5 stat-val" data-stat="defending" data-default="33" style="display: block;">{{player.player_statistics[0].red_cards}}</div>
+      <div class="pcdisplay-card-def" style="display: block;">RED</div>
 
       <div class="main-stat-diff main-stat-diff-6" data-stat="heading"></div>
-      <div class="pcdisplay-over pcdisplay-ovr6 stat-val" data-stat="heading" data-default="80" style="display: block;">{{player.player_statistics[0].yellow_cards}}</div>
-      <div class="pcdisplay-over card-phy" style="display: block;">YEL</div>
+      <div class="pcdisplay-ovr6 stat-val" data-stat="heading" data-default="80" style="display: block;">{{player.player_statistics[0].yellow_cards}}</div>
+      <div class="pcdisplay-card-phy" style="display: block;">YEL</div>
     </div>
   </div>
 </div>
