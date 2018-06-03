@@ -21,7 +21,7 @@ export class PlayerVideosComponent implements OnInit {
 
   ngOnInit() {
     if (this.player.player_basic_Info.videos_url.length > 0) {
-      this.videoFull = this.sanitizer.bypassSecurityTrustResourceUrl(this.player.player_basic_Info.videos_url[this.player.player_basic_Info.videos_url.length - 1]);
+      this.videoFull = this.sanitizer.bypassSecurityTrustResourceUrl(this.player.player_basic_Info.videos_url[this.player.player_basic_Info.videos_url.length - 1] + '?autoplay=1');
       this.isVideoExists = true;
     }
   }

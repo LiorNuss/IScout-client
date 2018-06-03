@@ -135,6 +135,7 @@ export class ResultsMapComponent  {
   @Input()
   set playersResults(playerResults: Player[]) {
     this._playersResults = playerResults;
+    this.markers = [];
     playerResults.forEach(playerResult => {
       let currTeam = this.globalData.teamsMap.get(playerResult.player_basic_Info.team);
       let marker = {
