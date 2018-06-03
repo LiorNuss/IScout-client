@@ -3,9 +3,9 @@
 
 <img [src]=imageUrl class="main-pic">
 
-<div class="image-upload">
+<div class="image-upload" [ngClass]="{profileImg: !permissions}">
   <label for="file-input">
     <img class="upload-ico" src="../../../../assets/uploadwhite.png"/>
   </label>
-  <input id="file-input" type='file' [ngClass]="{profileImg: !permissions}" (change)="getImage($event)" accept="image/*">
+  <input id="file-input" type='file' (change)="getImage($event)" accept="image/*">
 </div>
