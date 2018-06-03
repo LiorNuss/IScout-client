@@ -122,9 +122,26 @@
   box-shadow: none;
 }
 
-.playerVideo {
+[_nghost-c16] {
+  background-color: #ffffff00;
+  -webkit-box-shadow: 3px 3px 2px #888888;
+  box-shadow: none;
+}
+
+.playerVideo[_ngcontent-c15] {
   background: transparent;
   position: relative;
-  bottom: 600px;
-  left: 40%;
+  bottom: 655px;
+  left: 45%;
+}
+
+input#video {
+  background: #13111163;
+  color: white;
+}
+
+button {
+  position: relative;
+  top: 36px;
+  right: 20.5%;
 }

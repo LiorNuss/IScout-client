@@ -1,0 +1,24 @@
+.ipt {
+  background-color: #13111163;
+  color: white;
+  position: relative;
+  right: 26%;
+  top: 170px;
+}
+
+.lbl {
+  position: relative;
+  right: 26%;
+  top: 166px;
+}
+
+.moto-widget-button {
+  min-height: auto !important;
+  position: relative;
+  right: 26%;
+  top: 166px;
+}
+
+.moto-widget-button:hover {
+  cursor: pointer;
+}
