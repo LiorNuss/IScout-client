@@ -85,6 +85,12 @@ export class SearchRowComponent implements OnInit{
     if (this.searchRowService.filtersForSearch.length > 0) {
       this.fruits = this.searchRowService.filtersForSearch;
     }
+    else {
+      if (this.searchRowService.searchPlayersResults.length === 0) {
+        this.search();
+      }
+    }
+
     // this.autoCompleteOptions.set('תפקיד', this.positions);
     // this.autoCompleteOptions.set('מדינה', this.countries);
     // this.autoCompleteOptions.set('קבוצה', this.teams);
@@ -98,9 +104,10 @@ export class SearchRowComponent implements OnInit{
     // this.autoCompleteOptions.set('כרטיסים צהובים', []);
     // this.autoCompleteOptions.set('כרטיסים אדומים', []);
     // this.autoCompleteOptions.set('ממוצע קילומטרים', []);
-  //  this.searchRowService.allCategories = this.searchCategories;
+    //  this.searchRowService.allCategories = this.searchCategories;
     //this.currentAutoComplete = this.searchCategories;
-    this.initAutoComplete();
+      this.initAutoComplete();
+
   }
 
   initAutoComplete(): void {
