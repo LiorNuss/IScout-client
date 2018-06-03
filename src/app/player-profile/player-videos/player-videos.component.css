@@ -22,3 +22,7 @@
 .moto-widget-button:hover {
   cursor: pointer;
 }
+
+.playerVideo {
+  visibility: hidden;
+}

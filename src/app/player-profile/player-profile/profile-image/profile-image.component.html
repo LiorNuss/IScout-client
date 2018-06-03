@@ -2,4 +2,4 @@
 <!--<p-fileUpload mode="basic" name="demo[]"  accept="image/*"  (onUpload)="myUploader($event)" auto="true"></p-fileUpload>-->
 
 <img [src]=imageUrl >
-<input type='file' (change)="getImage($event)" accept="image/*" [hidden] = !permissions>
+<input type='file' [ngClass]="{profileImg: !permissions}" (change)="getImage($event)" accept="image/*">

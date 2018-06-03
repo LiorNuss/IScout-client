@@ -1,5 +1,5 @@
 <div class="container">
-  <form (ngSubmit)="onSubmit()" #playerVideos="ngForm" [hidden]="!permissions">
+  <form (ngSubmit)="onSubmit()" #playerVideos="ngForm" [ngClass]="{playerVideo: !permissions}" >
     <div class="form-group">
       <label for="video" class="lbl">Video Url</label>
       <input #videoInput type="text" class="form-control ipt" placeholder="Copy link from youtube" id="video" name="video">
