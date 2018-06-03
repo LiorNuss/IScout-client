@@ -1,3 +1,24 @@
 .profileImg {
   visibility: hidden;
 }
+
+.image-upload > input
+{
+  display: none;
+}
+
+.upload-ico {
+  width: 28.83px;
+  height: 34px;
+  position: relative;
+  bottom: 37px;
+  left: 27px;
+}
+
+.main-pic {
+  width: 332.8px;
+  position: relative;
+  left: 2%;
+  border-radius: 10px;
+  height: 237.94px;
+}
