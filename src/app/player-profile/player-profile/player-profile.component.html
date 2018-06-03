@@ -12,27 +12,27 @@
 
         <tbody><tr class="">
           <th>Name</th>
-          <td class="table-row-text">Luis Suárez</td>
+          <td class="table-row-text">{{player.player_basic_Info.name}}</td>
         </tr>
         <tr class="">
           <th>Team</th>
-          <td class="table-row-text"> FC Barcelona </td>
+          <td class="table-row-text"> {{teamName}}</td>
         </tr>
         <tr class="">
           <th>Country</th>
-          <td class="table-row-text"> Uruguay </td>
+          <td class="table-row-text"> {{player.player_basic_Info.country}} </td>
         </tr>
         <tr class="">
           <th>Leg <i class="icon-footprint"></i></th>
-          <td class="table-row-text">Right </td>
+          <td class="table-row-text">{{player.player_basic_Info.leg}} </td>
         </tr>
         <tr class="">
           <th>Age</th>
-          <td class="table-row-text">30</td>
+          <td class="table-row-text">{{player.player_basic_Info.age}}</td>
         </tr>
         <tr class="">
           <th>Position</th>
-          <td class="table-row-text">Striker</td>
+          <td class="table-row-text">{{player.player_basic_Info.position}}</td>
         </tr>
         </tbody>
       </table>
@@ -48,36 +48,36 @@
 
         <tbody><tr class="">
           <th>Goals</th>
-          <td class="table-row-text">15</td>
+          <td class="table-row-text">{{player.player_statistics[0].goals}}</td>
         </tr>
         <tr class="">
           <th>Assists</th>
-          <td class="table-row-text"> 9 </td>
+          <td class="table-row-text"> {{player.player_statistics[0].assists}}</td>
         </tr>
         <tr class="">
           <th>Games In Starting Linup</th>
-          <td class="table-row-text"> 7 </td>
+          <td class="table-row-text"> {{player.player_statistics[0].games_in_starting_linup}} </td>
         </tr>
         <tr class="">
           <th>Games Entered From Bench </th>
-          <td class="table-row-text">5 </td>
+          <td class="table-row-text">{{player.player_statistics[0].games_entered_from_bench}}</td>
         </tr>
         <tr class="">
           <th>Red Cards</th>
-          <td class="table-row-text">30</td>
+          <td class="table-row-text">{{player.player_statistics[0].red_cards}}</td>
         </tr>
         <tr class="">
           <th>Yellow Cards</th>
-          <td class="table-row-text">3</td>
+          <td class="table-row-text">{{player.player_statistics[0].yellow_cards}}</td>
         </tr>
         <tr class="">
           <th>Average KM</th>
-          <td class="table-row-text">3.45</td>
+          <td class="table-row-text">{{player.player_statistics[0].average_km_per_game | number}} </td>
         </tr>
         </tbody>
       </table>
     </div>
   </div>
   <app-player-graph [player]="player" class="player-graph-main"> </app-player-graph>
-  <!--<app-player-videos [player]="player"></app-player-videos>-->
+  <app-player-videos class="playerVideo" [player]="player"></app-player-videos>
 </div>

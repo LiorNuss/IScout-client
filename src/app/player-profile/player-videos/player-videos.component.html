@@ -1,11 +1,10 @@
 <div class="container">
-  <h1>Player Registration </h1>
   <form (ngSubmit)="onSubmit()" #playerVideos="ngForm">
     <div class="form-group">
       <label for="video">Video Url</label>
       <input #videoInput type="text" class="form-control" placeholder="Copy link from youtube" id="video" name="video">
-      <button (click)="videoUpload(videoInput.value)"> העלה סרטון</button>
+      <button (click)="videoUpload(videoInput.value)"> upload video</button>
     </div>
   </form>
-  <iframe width="560" height="315" [src]="videoFull" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe *ngIf="isVideoExists" width="560" height="315" [src]="videoFull" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>

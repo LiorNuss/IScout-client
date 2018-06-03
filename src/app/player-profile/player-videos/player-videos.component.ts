@@ -14,13 +14,14 @@ export class PlayerVideosComponent implements OnInit {
   model: VideoEdit;
   videoPrefix = "https://www.youtube.com/embed/";
   videoFull: any;
-
+  isVideoExists: boolean = false;
 
   constructor(private sanitizer: DomSanitizer, private playerDao: PlayerDaoService) { }
 
   ngOnInit() {
     if (this.player.player_basic_Info.videos_url.length > 0) {
-      this.videoFull = this.sanitizer.bypassSecurityTrustResourceUrl(this.player.player_basic_Info.videos_url[0]);
+      this.videoFull = this.sanitizer.bypassSecurityTrustResourceUrl(this.player.player_basic_Info.videos_url[this.player.player_basic_Info.videos_url.length - 1]);
+      this.isVideoExists = true;
     }
   }
 
@@ -32,7 +33,7 @@ export class PlayerVideosComponent implements OnInit {
     this.playerDao.uploadVideo(this.player.player_basic_Info.player_id, fullPath).subscribe(() => {
       console.log(fullPath);
       this.videoFull = this.sanitizer.bypassSecurityTrustResourceUrl(fullPath);
-
+      this.isVideoExists = true;
     });
   }
 

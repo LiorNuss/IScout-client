@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {Player} from "../../player-utils/entities/player";
 import {SearchRowService} from "../../search-row/search-row.service";
 import {LoginService} from "../../login/login.service";
@@ -32,6 +32,11 @@ export class PlayerResultListComponent implements OnInit{
       this.players = Array.from(this.searchService.searchPlayersResults);
     }
   }
+
+  //
+  // ngOnDestroy(): void {
+  //   this.searchService.searchResultEvent.unsubscribe();
+  // }
 
   pageNext(): void {
     this.searchService.currentPage += 1;

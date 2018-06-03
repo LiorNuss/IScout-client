@@ -121,3 +121,10 @@
   background-color: azure;
   box-shadow: none;
 }
+
+.playerVideo {
+  background: transparent;
+  position: relative;
+  bottom: 600px;
+  left: 40%;
+}
