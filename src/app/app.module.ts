@@ -14,6 +14,7 @@ import {SharedModule} from "./shared/shared.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {DashboardModule} from "./dashboard/dashboard.module";
 import {ScouterRegistrationModule} from "./scouter-registration/scouter-registration.module";
+import {AboutModule} from "./about/about.module";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {ScouterRegistrationModule} from "./scouter-registration/scouter-registra
     SharedModule,
     AppRoutingModule,
     DashboardModule,
+    AboutModule,
     ScouterRegistrationModule
   ],
   providers: [],

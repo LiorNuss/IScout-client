@@ -6,11 +6,13 @@ import {LoginGuardService} from "./login/login-guard.service";
 import {PlayerProfileComponent} from "./player-profile/player-profile/player-profile.component";
 import {PlayerRegistrationComponent} from "./player-registration/player-registration/player-registration.component";
 import {ScouterRegistrationComponent} from "./scouter-registration/scouter-registration/scouter-registration.component";
+import {AboutComponent} from "./about/about/about.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent, canActivate: [LoginGuardService] },
   { path: 'login', component: LoginComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'playerRegistration', component: PlayerRegistrationComponent },
   { path: 'scouterRegistration', component: ScouterRegistrationComponent},
   { path: 'profile/:playerId', component: PlayerProfileComponent, canActivate: [LoginGuardService]  },

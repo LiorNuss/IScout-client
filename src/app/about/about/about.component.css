@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "aa";
+  src: url("../../../../node_modules/font-awesome/fonts/fontawesome-webfont.ttf");
+}
+.headline{
+  text-shadow: 2px 2px 2px #e1dbdb;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-size: 90px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+}
+.foot-headline{
+  font-style: normal;
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff !important;
+  margin-top: -30px;
+}
+.site-review{
+  margin-left: 45%;
+  width: 49%;
+  line-height: 1.2;
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-size: 90px;
+  display: block;
+  font-size: x-large;
+}
+video{
+  position: absolute;
+  top: 29%;
+  transition: width 2s,height 3s;
+  left: 4%;
+  border: 1px hidden #6c6c6c;
+  border-radius: 65px;
+}
+header{
+  background: transparent !important;
+}
+video:hover{
+  width:500px;
+  height: 350px;
+}
+.note{
+  margin-left:36%;
+  font-family: Aharoni;
+}
+.multiple-columns{
+  column-count: 2;
+  column-gap: 40px;
+}
+.foot{
+  height: 50px;
+  border-top-color: #424242;
+  border-top-width: 2px;
+  border-top-style: hidden;
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+section{
+  margin-top: 6%;
+}
